@@ -17,3 +17,8 @@
 1. Quanto tempo dura uma montaria de 8 pontos? - Reel educativo com motion graphic sobre o placar e o limite de 8 segundos
 2. A reação do peão 1 segundo depois que o touro para - Reel câmera lenta no rosto do peão no momento da descida, sem narração
 3. Esse touro trocou de dono 3 vezes — veja por quê - Mini doc vertical com narração em off contando a origem de um touro difícil
+
+## 2026-06-19
+1. De carneiro a campeão mundial - Reel narrativo com arquivo sobre a origem de João Crimber em Divinópolis montando carneiros até o título mundial
+2. Qual touro você NÃO iria montar por nada? - Reel de touros bravos com enquete gerando interação nos comentários
+3. 13 anos de diferença, 4,5 pontos no placar — Reel split-screen duelo de gerações Alisson x Gabriel Henrique em Americana
