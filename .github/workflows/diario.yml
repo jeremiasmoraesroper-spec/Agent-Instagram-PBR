@@ -1,0 +1,43 @@
+name: Ideias de video PBR - diario
+
+on:
+  schedule:
+    # 09:00 UTC = 06:00 no horario de Brasilia (UTC-3).
+    # Obs: o GitHub Actions pode atrasar alguns minutos em horarios de pico.
+    - cron: "0 9 * * *"
+  workflow_dispatch: {}   # permite rodar manualmente pelo botao "Run workflow"
+
+permissions:
+  contents: write          # necessario pra comitar o historico atualizado
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Gerar e enviar as ideias
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          PHONE: ${{ secrets.PHONE }}
+          SUPERMETRICS_API_KEY: ${{ secrets.SUPERMETRICS_API_KEY }}
+          SUPERMETRICS_DS_USER: ${{ secrets.SUPERMETRICS_DS_USER }}
+        run: python gerar_e_enviar.py
+
+      - name: Salvar o historico atualizado
+        run: |
+          git config user.name "agente-pbr"
+          git config user.email "agente-pbr@users.noreply.github.com"
+          git add historico.md
+          git commit -m "Ideias do dia" || echo "Nada novo para salvar"
+          git push
