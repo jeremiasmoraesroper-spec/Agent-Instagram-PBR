@@ -84,7 +84,6 @@ def puxar_dados_pbr():
         "start_date": inicio,
         "end_date": fim,
         "fields": SM_FIELDS,
-        "settings": {"report_type": "AccountMedia"},
         "order_rows": "media_like_count desc",
         "max_rows": 40,
     }
