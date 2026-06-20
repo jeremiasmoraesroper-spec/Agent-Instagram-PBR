@@ -32,3 +32,8 @@
 1. O backflip que o algoritmo não esquece - Reel câmera lenta contando 3 backflips na tela, baseado no post de maior alcance do período (850k reach).
 2. Rei da Mata x JPV: o portão que decidiu tudo - Reel narrativo de queda inesperada com câmera lenta e texto 'ninguém esperava isso', baseado em 306k reach.
 3. Por que peões que voltam são mais perigosos - Reel storytelling sobre a volta dramática do Cléber Henrique Marques, baseado em 320k reach e alto engajamento emocional.
+
+## 2026-06-20
+1. JPV lidera, mas o 2º tem 64% de aproveitamento - Reel comparativo de pontos vs % de acerto, clima de virada no ranking
+2. 5 eventos e 70% de aproveitamento — quem é Lucas Araújo? - Reel revelação sobre atleta em ascensão com melhor % do ranking
+3. Rogério Venâncio: 1 evento, 4/4, 100% — isso é real? - Reel estilo 'espera o final' com dados chocantes de aproveitamento perfeito
