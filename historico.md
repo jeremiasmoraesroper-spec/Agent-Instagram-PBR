@@ -27,3 +27,8 @@
 1. Henrique & Juliano nos bretes — quem vem em 2026? - Reel suspense/revelação com arquivo e chamada nos comentários, baseado no post mais curtido do período (94k likes).
 2. Alisson: invicto, mas o relógio não perdoa ninguém - Reel câmera lenta com contador cronométrico na tela, explorando a série de posts do Alisson invicto.
 3. O que o placar 87,75 significa na prática? - Reel educativo com motion text explicando o sistema de pontuação, baseado no alto alcance e saves do duelo Alisson x João do Pulo.
+
+## 2026-06-20
+1. O backflip que o algoritmo não esquece - Reel câmera lenta contando 3 backflips na tela, baseado no post de maior alcance do período (850k reach).
+2. Rei da Mata x JPV: o portão que decidiu tudo - Reel narrativo de queda inesperada com câmera lenta e texto 'ninguém esperava isso', baseado em 306k reach.
+3. Por que peões que voltam são mais perigosos - Reel storytelling sobre a volta dramática do Cléber Henrique Marques, baseado em 320k reach e alto engajamento emocional.
