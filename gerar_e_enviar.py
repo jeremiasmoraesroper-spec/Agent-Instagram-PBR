@@ -25,6 +25,7 @@ continua funcionando so com trends/conhecimento de nicho e avisa na mensagem.
 import json
 import os
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -157,11 +158,13 @@ def gerar_ideias(historico, dados_pbr, data_str):
                 "whatsapp": {
                     "type": "string",
                     "description": (
-                        "Mensagem completa pronta pra enviar no WhatsApp, em portugues "
-                        "com acentos corretos e emojis, curta e escaneavel. Comece com "
-                        "uma linha de titulo tipo: (emoji de touro) PBR Brazil - Ideias "
-                        "de video de hoje (" + data_str + "). Liste as 3 ideias numeradas "
-                        "com titulo, formato, gancho, e termine com uma linha 'Base: ...'."
+                        "Mensagem CONCISA pronta pra WhatsApp, em portugues com acentos. "
+                        "IMPORTANTE: use POUCOS emojis (so um touro no titulo) e mantenha "
+                        "curta, idealmente ate ~450 caracteres no total. Comece com a linha "
+                        "de titulo: PBR Brazil - Ideias de video de hoje (" + data_str + "). "
+                        "Liste as 3 ideias numeradas 1) 2) 3), cada uma em ate 2 linhas "
+                        "curtas (titulo + formato e gancho). Sem paragrafo longo de "
+                        "justificativa. Termine com uma linha curta 'Base: ...'."
                     ),
                 },
                 "historico": {
@@ -189,15 +192,47 @@ def gerar_ideias(historico, dados_pbr, data_str):
     raise RuntimeError("A IA nao retornou as ideias no formato esperado.")
 
 
-def enviar_whatsapp(mensagem):
+def _dividir_mensagem(texto, limite=500):
+    """Quebra a mensagem em partes (o CallMeBot trunca mensagens longas).
+
+    Mantem blocos (ideias separadas por linha em branco) inteiros.
+    """
+    if len(texto) <= limite:
+        return [texto]
+    blocos = texto.split("\n\n")
+    partes, atual = [], ""
+    for bloco in blocos:
+        candidato = (atual + "\n\n" + bloco) if atual else bloco
+        if len(candidato) > limite and atual:
+            partes.append(atual)
+            atual = bloco
+        else:
+            atual = candidato
+    if atual:
+        partes.append(atual)
+    return partes
+
+
+def _enviar_parte(texto):
     resp = requests.get(
         "https://api.callmebot.com/whatsapp.php",
-        params={"phone": PHONE, "apikey": CALLMEBOT_APIKEY, "text": mensagem},
+        params={"phone": PHONE, "apikey": CALLMEBOT_APIKEY, "text": texto},
         timeout=60,
     )
-    print("Resposta CallMeBot:", resp.text[:300])
+    print("Resposta CallMeBot:", resp.text[:200])
     if "queued" not in resp.text.lower() and "sent" not in resp.text.lower():
         sys.exit("ERRO: CallMeBot nao confirmou o envio.")
+
+
+def enviar_whatsapp(mensagem):
+    partes = _dividir_mensagem(mensagem)
+    total = len(partes)
+    for i, parte in enumerate(partes, 1):
+        if total > 1:
+            parte = "(%d/%d)\n%s" % (i, total, parte)
+        _enviar_parte(parte)
+        if i < total:
+            time.sleep(8)  # respeita o limite de frequencia do CallMeBot
 
 
 def salvar_historico(linhas, data_str):
