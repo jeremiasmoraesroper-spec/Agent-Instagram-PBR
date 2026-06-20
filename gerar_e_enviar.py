@@ -52,6 +52,9 @@ SM_FIELDS = (
 # Ranking oficial da PBR Brazil (dados no HTML da pagina)
 RANKING_URL = "https://pbrbrazil.com/series/etapas/standings/"
 
+# Assuntos em alta no Brasil hoje (Google Trends - RSS publico)
+TRENDS_URL = "https://trends.google.com/trending/rss?geo=BR"
+
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 CALLMEBOT_APIKEY = os.environ.get("CALLMEBOT_APIKEY")
 PHONE = os.environ.get("PHONE")
@@ -136,59 +139,96 @@ def puxar_ranking_pbr():
         return ""
 
 
-def gerar_ideias(historico, dados_pbr, ranking, data_str):
+def puxar_trends():
+    """Busca os assuntos em alta no Brasil hoje (Google Trends, RSS publico)."""
+    try:
+        resp = requests.get(
+            TRENDS_URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=60
+        )
+        if resp.status_code != 200:
+            print("Aviso: Google Trends status %s" % resp.status_code)
+            return ""
+        titulos = re.findall(r"<title>(.*?)</title>", resp.text, re.S)
+        # o 1o titulo e o nome do feed; pega os proximos ~18 termos em alta
+        termos = [html.unescape(t).strip() for t in titulos[1:19] if t.strip()]
+        return ", ".join(termos)
+    except Exception as e:  # noqa: BLE001
+        print("Aviso: falha ao buscar trends: %s" % e)
+        return ""
+
+
+def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
     """Pede a IA 3 ideias novas. Retorna dict com 'whatsapp' e 'historico'."""
     client = Anthropic(api_key=ANTHROPIC_API_KEY)
 
     sistema = (
-        "Voce e um estrategista de conteudo para o Instagram da PBR Brazil "
-        "(montaria em touros / rodeio profissional no Brasil). Seu trabalho e "
-        "sugerir ideias de video (reels) que tendem a viralizar em 2026: gancho "
-        "forte nos primeiros 2 segundos, estrutura situacao-tensao-resolucao, "
-        "bastidores autenticos com ritmo, e formatos que geram salvamento e "
-        "compartilhamento. Use linguagem de quem entende do nicho (peao, touro, "
-        "arena, portao, montaria, evento). IMPORTANTE: escreva sempre em "
-        "portugues do Brasil com acentuacao correta e use emojis quando fizer "
-        "sentido (ex: o emoji de touro no inicio da mensagem)."
+        "Voce e um especialista em TRENDS virais de redes sociais (Reels do "
+        "Instagram, TikTok) aplicados ao nicho de montaria em touros / PBR Brazil. "
+        "Sua especialidade: pegar um TREND viral do momento (um formato de video, "
+        "um audio/musica em alta, um meme, um desafio, ou um assunto que esta "
+        "bombando) e adaptar pro cenario da PBR Brazil, usando um competidor de "
+        "sucesso como personagem. "
+        "RESTRICAO IMPORTANTE: os atletas NAO estao disponiveis pra gravar nada "
+        "novo - entao NADA de dancinha, coreografia, ou o atleta participando do "
+        "trend ao vivo. A execucao tem que funcionar com material que a PBR ja "
+        "tem: imagens de arquivo, montarias antigas, cortes, audio em alta por "
+        "cima de clipes existentes, texto na tela, comparacoes e narracao. "
+        "Escreva sempre em portugues do Brasil com acentuacao correta e use "
+        "poucos emojis."
     )
 
-    if dados_pbr:
-        bloco_dados = (
-            "DADOS REAIS de performance dos posts recentes da PBR Brazil "
-            "(JSON do Supermetrics; analise quais temas/formatos tiveram mais "
-            "curtidas, comentarios, alcance, salvamentos e compartilhamentos, e "
-            "baseie as ideias no que esta funcionando):\n" + dados_pbr + "\n"
+    # FONTE PRINCIPAL: trends.
+    if trends:
+        bloco_trends = (
+            "ASSUNTOS EM ALTA NO BRASIL HOJE (Google Trends):\n" + trends + "\n"
         )
     else:
-        bloco_dados = (
-            "OBS: nao foi possivel ler os dados internos da PBR hoje - baseie as "
-            "ideias no seu conhecimento do nicho e em trends atuais de reels.\n"
+        bloco_trends = (
+            "OBS: nao consegui puxar os trends de hoje - use seu conhecimento dos "
+            "formatos de reel virais atuais.\n"
         )
 
+    # FONTES DE APOIO (so pra escolher o competidor e o que ressoa):
     if ranking:
         bloco_ranking = (
-            "\nRANKING OFICIAL ATUAL da PBR Brazil (do site oficial). Colunas: "
-            "Classificacao, Competidor, Pais, Eventos, Montarias/Paradas, "
-            "% Paradas, Dinheiro, Pontos, Diferenca do Lider. Use os lideres, "
-            "viradas, % de aproveitamento e premiacoes pra criar ideias com "
-            "ganchos concretos (ex: lider, briga pelo topo, atleta em ascensao):\n"
-            + ranking + "\n"
+            "\nAPOIO - Ranking oficial atual da PBR Brazil (use SO pra escolher um "
+            "competidor de sucesso pra encaixar no trend; colunas: Classificacao, "
+            "Competidor, Pais, Eventos, Montarias/Paradas, % Paradas, Dinheiro, "
+            "Pontos, Diferenca do Lider):\n" + ranking + "\n"
         )
     else:
         bloco_ranking = ""
 
+    if dados_pbr:
+        bloco_dados = (
+            "\nAPOIO - performance dos posts recentes da PBR no Instagram (JSON do "
+            "Supermetrics; use SO pra entender que tipo de conteudo ressoa):\n"
+            + dados_pbr + "\n"
+        )
+    else:
+        bloco_dados = ""
+
     instrucao = (
-        "Gere EXATAMENTE 3 ideias NOVAS de video para hoje (" + data_str + ").\n\n"
-        + bloco_dados
+        "Gere EXATAMENTE 3 ideias NOVAS de video (reels) para hoje ("
+        + data_str + ").\n\n"
+        "O FOCO #1 SAO OS TRENDS. Cada uma das 3 ideias deve PARTIR de um trend "
+        "viral (um formato de reel em alta, um audio/musica do momento, um meme, "
+        "um desafio, OU um dos assuntos em alta abaixo) e ADAPTAR pro cenario da "
+        "PBR Brazil, usando um competidor de sucesso como personagem.\n\n"
+        + bloco_trends
         + bloco_ranking
-        + "\nREGRA CRITICA: as ideias NAO podem repetir nem ser variacoes obvias de "
-        "nenhuma ideia ja enviada. Historico completo (nao repita nada parecido):\n\n"
+        + bloco_dados
+        + "\nLEMBRETE CRITICO: os atletas NAO estao disponiveis pra gravar - NADA "
+        "de dancinha/coreografia/atleta participando do trend. Use so material de "
+        "arquivo (montarias, cortes), edicao, audio em alta por cima de clipes, "
+        "texto na tela, comparacoes e narracao.\n\n"
+        "REGRA: as ideias NAO podem repetir nem ser variacoes obvias de nenhuma "
+        "ideia ja enviada. Historico completo (nao repita nada parecido):\n"
         "--- HISTORICO ---\n"
         + (historico or "(vazio - nenhuma ideia enviada ainda)")
         + "\n--- FIM DO HISTORICO ---\n\n"
-        "Cada ideia precisa de: titulo curto e chamativo, formato (ex: Reel 9-20s, "
-        "POV, carrossel, mini vlog), gancho (os primeiros 3 segundos) e o porque "
-        "(qual dado da PBR ou trend justifica).\n\n"
+        "Cada ideia precisa deixar claro: QUAL e o trend, e COMO adaptar pra PBR "
+        "(formato, gancho dos primeiros 3s, e qual competidor/angulo usar).\n\n"
         "Use a ferramenta 'enviar_ideias' para responder com a mensagem de WhatsApp "
         "pronta e o resumo das 3 ideias."
     )
@@ -202,13 +242,13 @@ def gerar_ideias(historico, dados_pbr, ranking, data_str):
                 "whatsapp": {
                     "type": "string",
                     "description": (
-                        "Mensagem CONCISA pronta pra WhatsApp, em portugues com acentos. "
-                        "IMPORTANTE: use POUCOS emojis (so um touro no titulo) e mantenha "
-                        "curta, idealmente ate ~450 caracteres no total. Comece com a linha "
-                        "de titulo: PBR Brazil - Ideias de video de hoje (" + data_str + "). "
-                        "Liste as 3 ideias numeradas 1) 2) 3), cada uma em ate 2 linhas "
-                        "curtas (titulo + formato e gancho). Sem paragrafo longo de "
-                        "justificativa. Termine com uma linha curta 'Base: ...'."
+                        "Mensagem pronta pra WhatsApp, em portugues com acentos e "
+                        "POUCOS emojis (so um touro no titulo). Comece com a linha de "
+                        "titulo: PBR Brazil - Trends de hoje (" + data_str + "). "
+                        "Liste as 3 ideias numeradas 1) 2) 3). Cada ideia deve mostrar "
+                        "em 2-3 linhas curtas: o TREND (qual e), como adaptar pra PBR "
+                        "(formato + gancho dos primeiros 3s) e qual competidor/angulo. "
+                        "Seja direta e pratica."
                     ),
                 },
                 "historico": {
@@ -293,9 +333,10 @@ def main():
     data_br = hoje.strftime("%d/%m")
 
     historico = ler_historico()
+    trends = puxar_trends()
     dados_pbr = puxar_dados_pbr()
     ranking = puxar_ranking_pbr()
-    dados = gerar_ideias(historico, dados_pbr, ranking, data_br)
+    dados = gerar_ideias(historico, dados_pbr, ranking, trends, data_br)
 
     enviar_whatsapp(dados["whatsapp"])
     salvar_historico(dados["historico"], data_iso)
