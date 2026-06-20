@@ -144,31 +144,49 @@ def gerar_ideias(historico, dados_pbr, data_str):
         "Cada ideia precisa de: titulo curto e chamativo, formato (ex: Reel 9-20s, "
         "POV, carrossel, mini vlog), gancho (os primeiros 3 segundos) e o porque "
         "(qual dado da PBR ou trend justifica).\n\n"
-        "Responda APENAS com um JSON valido, sem texto antes ou depois, neste formato:\n"
-        '{\n'
-        '  "whatsapp": "mensagem completa pronta pra enviar no WhatsApp, em portugues '
-        "com acentos corretos e emojis, curta e escaneavel, comecando com uma linha de "
-        "titulo tipo (emoji de touro) PBR Brazil - Ideias de video de hoje (" + data_str + ") "
-        'e listando as 3 ideias numeradas com titulo, formato, gancho, e uma linha final Base: ...",\n'
-        '  "historico": ["Titulo 1 - resumo de 1 linha", "Titulo 2 - resumo de 1 linha", "Titulo 3 - resumo de 1 linha"]\n'
-        '}'
+        "Use a ferramenta 'enviar_ideias' para responder com a mensagem de WhatsApp "
+        "pronta e o resumo das 3 ideias."
     )
+
+    ferramenta = {
+        "name": "enviar_ideias",
+        "description": "Envia a mensagem de WhatsApp pronta e o resumo das 3 ideias.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "whatsapp": {
+                    "type": "string",
+                    "description": (
+                        "Mensagem completa pronta pra enviar no WhatsApp, em portugues "
+                        "com acentos corretos e emojis, curta e escaneavel. Comece com "
+                        "uma linha de titulo tipo: (emoji de touro) PBR Brazil - Ideias "
+                        "de video de hoje (" + data_str + "). Liste as 3 ideias numeradas "
+                        "com titulo, formato, gancho, e termine com uma linha 'Base: ...'."
+                    ),
+                },
+                "historico": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "As 3 ideias resumidas em 1 linha cada (Titulo - resumo).",
+                },
+            },
+            "required": ["whatsapp", "historico"],
+        },
+    }
 
     resp = client.messages.create(
         model=MODELO,
         max_tokens=1500,
         system=sistema,
+        tools=[ferramenta],
+        tool_choice={"type": "tool", "name": "enviar_ideias"},
         messages=[{"role": "user", "content": instrucao}],
     )
-    texto = resp.content[0].text.strip()
 
-    if texto.startswith("```"):
-        texto = texto.split("```", 2)[1]
-        if texto.startswith("json"):
-            texto = texto[4:]
-        texto = texto.strip()
-
-    return json.loads(texto)
+    for bloco in resp.content:
+        if getattr(bloco, "type", None) == "tool_use":
+            return bloco.input
+    raise RuntimeError("A IA nao retornou as ideias no formato esperado.")
 
 
 def enviar_whatsapp(mensagem):
