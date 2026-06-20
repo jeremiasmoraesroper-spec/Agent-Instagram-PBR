@@ -42,3 +42,8 @@
 1. Quem ama cuida x PBR - Trend emocional de saúde mental adaptado com clipes de peões levantando após quedas, personagem Cléber Henrique Marques.
 2. Fúria/Comeback épico - Trend de virada hype (Furia esports) adaptado para a queda e recuperação de JPV no ranking, edição estilo highlights.
 3. X anos, mesma arena - Trend de comparação temporal (split-screen glow up) com Warley Oliveira da Silva, mesmo portão anos diferentes.
+
+## 2026-06-20
+1. Ankara trend de revelação — Lucas Araújo, 70% de aproveitamento, edição câmera lenta com batida dramática
+2. VNL rally de pontos — Warley Oliveira, placar subindo na tela a cada montaria em edição acelerada
+3. Personagem subestimado vira protagonista (Gustavo Heide trend) — Alisson De Souza, 6 eventos e invicto, storytelling em 3 atos
