@@ -28,6 +28,7 @@ import os
 import re
 import sys
 import time
+import urllib.parse
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -256,8 +257,18 @@ def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
                     "items": {"type": "string"},
                     "description": "As 3 ideias resumidas em 1 linha cada (Titulo - resumo).",
                 },
+                "buscas": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": (
+                        "EXATAMENTE 3 termos de busca curtos (um por ideia, na mesma "
+                        "ordem 1,2,3) pra encontrar exemplos REAIS do trend no TikTok/"
+                        "Instagram. Ex: nome do audio/musica, nome do desafio, ou o "
+                        "formato + palavra 'trend'. Sem hashtag, sem aspas."
+                    ),
+                },
             },
-            "required": ["whatsapp", "historico"],
+            "required": ["whatsapp", "historico", "buscas"],
         },
     }
 
@@ -327,6 +338,17 @@ def salvar_historico(linhas, data_str):
         f.write(bloco)
 
 
+def adicionar_links(mensagem, buscas):
+    """Acrescenta um link de busca (TikTok) por ideia, pra ver o trend."""
+    if not buscas:
+        return mensagem
+    linhas = ["Veja os trends:"]
+    for i, busca in enumerate(buscas, 1):
+        url = "https://www.tiktok.com/search?q=" + urllib.parse.quote(str(busca))
+        linhas.append("%d) %s" % (i, url))
+    return mensagem + "\n\n" + "\n".join(linhas)
+
+
 def main():
     hoje = datetime.now(FUSO_BRASILIA)
     data_iso = hoje.strftime("%Y-%m-%d")
@@ -338,7 +360,8 @@ def main():
     ranking = puxar_ranking_pbr()
     dados = gerar_ideias(historico, dados_pbr, ranking, trends, data_br)
 
-    enviar_whatsapp(dados["whatsapp"])
+    mensagem = adicionar_links(dados["whatsapp"], dados.get("buscas"))
+    enviar_whatsapp(mensagem)
     salvar_historico(dados["historico"], data_iso)
     print("OK - ideias enviadas e historico atualizado.")
 
