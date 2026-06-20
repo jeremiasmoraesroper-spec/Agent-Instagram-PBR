@@ -22,8 +22,10 @@ Se SUPERMETRICS_API_KEY nao estiver configurada (ou a chamada falhar), o agente
 continua funcionando so com trends/conhecimento de nicho e avisa na mensagem.
 """
 
+import html
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -46,6 +48,9 @@ SM_FIELDS = (
     "media_permalink,timestamp,media_caption,media_like_count,"
     "media_comments_count,media_reach,media_saved,media_shares"
 )
+
+# Ranking oficial da PBR Brazil (dados no HTML da pagina)
+RANKING_URL = "https://pbrbrazil.com/series/etapas/standings/"
 
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 CALLMEBOT_APIKEY = os.environ.get("CALLMEBOT_APIKEY")
@@ -105,7 +110,33 @@ def puxar_dados_pbr():
         return ""
 
 
-def gerar_ideias(historico, dados_pbr, data_str):
+def puxar_ranking_pbr():
+    """Le o ranking oficial da PBR Brazil (atletas, pontos, stats) do site.
+
+    Os dados vem no HTML da pagina (tabela). Retorna texto limpo do topo do
+    ranking, ou "" se indisponivel.
+    """
+    try:
+        resp = requests.get(
+            RANKING_URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=60
+        )
+        if resp.status_code != 200:
+            print("Aviso: ranking PBR status %s" % resp.status_code)
+            return ""
+        m = re.search(r"<tbody>(.*?)</tbody>", resp.text, re.S | re.I)
+        bloco = m.group(1) if m else resp.text
+        texto = re.sub(r"<[^>]+>", " ", bloco)      # remove tags
+        texto = html.unescape(texto)                # decodifica entidades
+        texto = re.sub(r"\s+", " ", texto).strip()  # normaliza espacos
+        # Colunas: Classificacao, Competidor, Pais, Eventos, Montarias/Paradas,
+        # % Paradas, Dinheiro, Pontos, Diferenca do Lider.
+        return texto[:2500] if texto else ""
+    except Exception as e:  # noqa: BLE001
+        print("Aviso: falha ao ler ranking PBR: %s" % e)
+        return ""
+
+
+def gerar_ideias(historico, dados_pbr, ranking, data_str):
     """Pede a IA 3 ideias novas. Retorna dict com 'whatsapp' e 'historico'."""
     client = Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -134,9 +165,22 @@ def gerar_ideias(historico, dados_pbr, data_str):
             "ideias no seu conhecimento do nicho e em trends atuais de reels.\n"
         )
 
+    if ranking:
+        bloco_ranking = (
+            "\nRANKING OFICIAL ATUAL da PBR Brazil (do site oficial). Colunas: "
+            "Classificacao, Competidor, Pais, Eventos, Montarias/Paradas, "
+            "% Paradas, Dinheiro, Pontos, Diferenca do Lider. Use os lideres, "
+            "viradas, % de aproveitamento e premiacoes pra criar ideias com "
+            "ganchos concretos (ex: lider, briga pelo topo, atleta em ascensao):\n"
+            + ranking + "\n"
+        )
+    else:
+        bloco_ranking = ""
+
     instrucao = (
         "Gere EXATAMENTE 3 ideias NOVAS de video para hoje (" + data_str + ").\n\n"
         + bloco_dados
+        + bloco_ranking
         + "\nREGRA CRITICA: as ideias NAO podem repetir nem ser variacoes obvias de "
         "nenhuma ideia ja enviada. Historico completo (nao repita nada parecido):\n\n"
         "--- HISTORICO ---\n"
@@ -250,7 +294,8 @@ def main():
 
     historico = ler_historico()
     dados_pbr = puxar_dados_pbr()
-    dados = gerar_ideias(historico, dados_pbr, data_br)
+    ranking = puxar_ranking_pbr()
+    dados = gerar_ideias(historico, dados_pbr, ranking, data_br)
 
     enviar_whatsapp(dados["whatsapp"])
     salvar_historico(dados["historico"], data_iso)
