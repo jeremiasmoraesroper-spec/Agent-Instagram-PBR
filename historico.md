@@ -37,3 +37,8 @@
 1. JPV lidera, mas o 2º tem 64% de aproveitamento - Reel comparativo de pontos vs % de acerto, clima de virada no ranking
 2. 5 eventos e 70% de aproveitamento — quem é Lucas Araújo? - Reel revelação sobre atleta em ascensão com melhor % do ranking
 3. Rogério Venâncio: 1 evento, 4/4, 100% — isso é real? - Reel estilo 'espera o final' com dados chocantes de aproveitamento perfeito
+
+## 2026-06-20
+1. Quem ama cuida x PBR - Trend emocional de saúde mental adaptado com clipes de peões levantando após quedas, personagem Cléber Henrique Marques.
+2. Fúria/Comeback épico - Trend de virada hype (Furia esports) adaptado para a queda e recuperação de JPV no ranking, edição estilo highlights.
+3. X anos, mesma arena - Trend de comparação temporal (split-screen glow up) com Warley Oliveira da Silva, mesmo portão anos diferentes.
