@@ -22,3 +22,8 @@
 1. De carneiro a campeão mundial - Reel narrativo com arquivo sobre a origem de João Crimber em Divinópolis montando carneiros até o título mundial
 2. Qual touro você NÃO iria montar por nada? - Reel de touros bravos com enquete gerando interação nos comentários
 3. 13 anos de diferença, 4,5 pontos no placar — Reel split-screen duelo de gerações Alisson x Gabriel Henrique em Americana
+
+## 2026-06-20
+1. Henrique & Juliano nos bretes — quem vem em 2026? - Reel suspense/revelação com arquivo e chamada nos comentários, baseado no post mais curtido do período (94k likes).
+2. Alisson: invicto, mas o relógio não perdoa ninguém - Reel câmera lenta com contador cronométrico na tela, explorando a série de posts do Alisson invicto.
+3. O que o placar 87,75 significa na prática? - Reel educativo com motion text explicando o sistema de pontuação, baseado no alto alcance e saves do duelo Alisson x João do Pulo.
