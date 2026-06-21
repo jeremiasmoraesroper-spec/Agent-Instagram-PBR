@@ -47,3 +47,8 @@
 1. Ankara trend de revelação — Lucas Araújo, 70% de aproveitamento, edição câmera lenta com batida dramática
 2. VNL rally de pontos — Warley Oliveira, placar subindo na tela a cada montaria em edição acelerada
 3. Personagem subestimado vira protagonista (Gustavo Heide trend) — Alisson De Souza, 6 eventos e invicto, storytelling em 3 atos
+
+## 2026-06-21
+1. Boss fight de touro — meme 'Final Fantasy/chefão de fase' adaptado com texto animado tipo game, touro imbatível como boss, JPV como o líder que caiu.
+2. Agro explica — formato educativo viral estilo canal rural com dados do touro (peso, força, velocidade) e Warley Oliveira como prova de aproveitamento.
+3. 0 a 100 de velocidade — trend de aceleração/comparação adaptado para a recuperação de Cleber Henrique Marques: de cirurgia a top 3 do ranking.
