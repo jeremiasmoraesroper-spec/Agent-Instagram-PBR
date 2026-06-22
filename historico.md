@@ -52,3 +52,8 @@
 1. Boss fight de touro — meme 'Final Fantasy/chefão de fase' adaptado com texto animado tipo game, touro imbatível como boss, JPV como o líder que caiu.
 2. Agro explica — formato educativo viral estilo canal rural com dados do touro (peso, força, velocidade) e Warley Oliveira como prova de aproveitamento.
 3. 0 a 100 de velocidade — trend de aceleração/comparação adaptado para a recuperação de Cleber Henrique Marques: de cirurgia a top 3 do ranking.
+
+## 2026-06-22
+1. Cuiabano x Warley - Reel de identidade regional com cortes de montaria e dado de 64% de aproveitamento do 2º do ranking
+2. Tabela WSL ao vivo - Reel estilo ranking em tempo real com pontuação animada, JPV no topo e perseguidores na tela
+3. Alerta defesa civil - Meme de aviso de emergência adaptado para touro de alto risco, Lucas Araújo como o único voluntário
