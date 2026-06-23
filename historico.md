@@ -57,3 +57,8 @@
 1. Cuiabano x Warley - Reel de identidade regional com cortes de montaria e dado de 64% de aproveitamento do 2º do ranking
 2. Tabela WSL ao vivo - Reel estilo ranking em tempo real com pontuação animada, JPV no topo e perseguidores na tela
 3. Alerta defesa civil - Meme de aviso de emergência adaptado para touro de alto risco, Lucas Araújo como o único voluntário
+
+## 2026-06-23
+1. São João / Arraial do brete - Estética de festa junina com forró em alta, Warley Oliveira, dado de 64% de aproveitamento
+2. Portugal vs Uzbekistan / Copa - Confronto improvável adaptado pra JPV x Rei da Mata, placar estilo chave de Copa, câmera lenta na queda
+3. Penduricalho em alta - Reel humorístico/educativo sobre a fivela de campeão, Cleber Henrique Marques e a volta de cirurgia ao top 3
