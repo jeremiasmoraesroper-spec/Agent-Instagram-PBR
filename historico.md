@@ -62,3 +62,8 @@
 1. São João / Arraial do brete - Estética de festa junina com forró em alta, Warley Oliveira, dado de 64% de aproveitamento
 2. Portugal vs Uzbekistan / Copa - Confronto improvável adaptado pra JPV x Rei da Mata, placar estilo chave de Copa, câmera lenta na queda
 3. Penduricalho em alta - Reel humorístico/educativo sobre a fivela de campeão, Cleber Henrique Marques e a volta de cirurgia ao top 3
+
+## 2026-06-24
+1. Gustavo Heide / repórter viral - Touro quebrando expectativa ao vivo, estilo susto em transmissão, personagem JPV
+2. GTA 6 - Tela de seleção de personagem com atributos do ranking, Warley Oliveira destaque por maior % de paradas
+3. Linha 9 Esmeralda - Linha do tempo vertical estilo metrô com fases da carreira, Cleber Henrique Marques de lesão ao top 3
