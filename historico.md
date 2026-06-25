@@ -67,3 +67,8 @@
 1. Gustavo Heide / repórter viral - Touro quebrando expectativa ao vivo, estilo susto em transmissão, personagem JPV
 2. GTA 6 - Tela de seleção de personagem com atributos do ranking, Warley Oliveira destaque por maior % de paradas
 3. Linha 9 Esmeralda - Linha do tempo vertical estilo metrô com fases da carreira, Cleber Henrique Marques de lesão ao top 3
+
+## 2026-06-25
+1. Diário Oficial da PBR - Reel estilo decreto burocrático animado com ranking, JPV como líder ameaçado por Warley
+2. Giovanna Antonelli / novela - Reel estilo trama de novela com volta dramática de Cleber Henrique Marques após lesão
+3. Estudante de medicina / o que aprendi estudando - Reel educativo bullet points sobre Lucas Araújo, maior aproveitamento do ranking
