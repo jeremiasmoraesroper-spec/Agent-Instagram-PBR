@@ -72,3 +72,8 @@
 1. Diário Oficial da PBR - Reel estilo decreto burocrático animado com ranking, JPV como líder ameaçado por Warley
 2. Giovanna Antonelli / novela - Reel estilo trama de novela com volta dramática de Cleber Henrique Marques após lesão
 3. Estudante de medicina / o que aprendi estudando - Reel educativo bullet points sobre Lucas Araújo, maior aproveitamento do ranking
+
+## 2026-06-26
+1. Você sabia que? / Rogério Venâncio - Revelação com dado chocante: 1 evento, 4/4 paradas, 100% de aproveitamento, audio de suspense animado
+2. Wimbledon 2026 / JPV x Warley - Chave de torneio animada com os top 4 do ranking, formato de confronto direto estilo tênis
+3. Meme Boeing / Alisson De Souza - Ironia de engenharia duvidosa que funciona, texto apontando técnica do peão, Alisson invicto em 6 eventos
