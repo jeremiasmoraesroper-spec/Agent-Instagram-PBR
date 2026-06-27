@@ -77,3 +77,8 @@
 1. Você sabia que? / Rogério Venâncio - Revelação com dado chocante: 1 evento, 4/4 paradas, 100% de aproveitamento, audio de suspense animado
 2. Wimbledon 2026 / JPV x Warley - Chave de torneio animada com os top 4 do ranking, formato de confronto direto estilo tênis
 3. Meme Boeing / Alisson De Souza - Ironia de engenharia duvidosa que funciona, texto apontando técnica do peão, Alisson invicto em 6 eventos
+
+## 2026-06-27
+1. Copa do Mundo / resultado dos jogos - Recap estilo placar de Copa com montarias do JPV e diferença no ranking animada na tela
+2. Naomi Osaka / retorno de veterana - Storytelling de volta após lesão com câmera lenta, texto na tela, Warley Oliveira 2º do ranking
+3. DJ Marlboro / funk em alta - Edição de montarias de Alisson De Souza cortada no beat do funk, dados de invencibilidade na tela
