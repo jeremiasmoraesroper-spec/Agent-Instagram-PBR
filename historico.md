@@ -82,3 +82,8 @@
 1. Copa do Mundo / resultado dos jogos - Recap estilo placar de Copa com montarias do JPV e diferença no ranking animada na tela
 2. Naomi Osaka / retorno de veterana - Storytelling de volta após lesão com câmera lenta, texto na tela, Warley Oliveira 2º do ranking
 3. DJ Marlboro / funk em alta - Edição de montarias de Alisson De Souza cortada no beat do funk, dados de invencibilidade na tela
+
+## 2026-06-28
+1. GP da Áustria / grid de largada F1 - Ranking top 5 como grid de F1, JPV na pole e Warley com DRS ativado a -238 pontos
+2. Wimbledon 2026 / precisão esportiva - Split-screen tênis x rodeio em câmera lenta, Lucas Araújo como o mais preciso do ranking (70,37%)
+3. Enquete A Casa do Patrão / votação de eliminação - Três touros em tela de votação fake, Jhon Carlos Moreira como o corajoso que para o mais temido
