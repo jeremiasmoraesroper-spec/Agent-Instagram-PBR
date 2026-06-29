@@ -87,3 +87,8 @@
 1. GP da Áustria / grid de largada F1 - Ranking top 5 como grid de F1, JPV na pole e Warley com DRS ativado a -238 pontos
 2. Wimbledon 2026 / precisão esportiva - Split-screen tênis x rodeio em câmera lenta, Lucas Araújo como o mais preciso do ranking (70,37%)
 3. Enquete A Casa do Patrão / votação de eliminação - Três touros em tela de votação fake, Jhon Carlos Moreira como o corajoso que para o mais temido
+
+## 2026-06-29
+1. Red Dead Redemption / Warley Oliveira - tela de loading de faroeste, ficha de inimigo do touro, câmera lenta no portão
+2. Jogo Brasil x Japão / JPV - placar estilo Copa animado com montarias do líder e gancho 'o Brasil que ninguém viu'
+3. Tenente Pimentel / Jhon Carlos Moreira - meme de autoridade desafiada, touro como antagonista, texto irônico seco
