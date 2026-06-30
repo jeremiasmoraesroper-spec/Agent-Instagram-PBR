@@ -92,3 +92,8 @@
 1. Red Dead Redemption / Warley Oliveira - tela de loading de faroeste, ficha de inimigo do touro, câmera lenta no portão
 2. Jogo Brasil x Japão / JPV - placar estilo Copa animado com montarias do líder e gancho 'o Brasil que ninguém viu'
 3. Tenente Pimentel / Jhon Carlos Moreira - meme de autoridade desafiada, touro como antagonista, texto irônico seco
+
+## 2026-06-30
+1. Fábrica / linha de produção viral - Reel estilo processo industrial com stats do JPV, texto animado, gancho 'como se fabrica um líder'
+2. Gasolina (Daddy Yankee trend) - Montarias de Warley Oliveira cortadas no beat, texto de combustível e aproveitamento de 64%
+3. 30 de junho / balanço de semestre - Storytelling de meio de ano com Cleber Henrique Marques, de lesão ao top 3, texto na tela
