@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Agente diario de ideias de video da PBR Brazil.
+Agente diario de TRENDS de video da PBR Brazil.
 Roda na nuvem (GitHub Actions) todo dia as 6h (horario de Brasilia).
 
 Fluxo:
-  1. Puxa a performance real dos posts/reels da PBR Brazil via API REST do Supermetrics.
-  2. Le o historico de ideias ja enviadas (historico.md) para NUNCA repetir.
-  3. Pede a IA (Claude) 3 ideias NOVAS de video baseadas no que esta performando.
-  4. Envia a mensagem no WhatsApp via CallMeBot.
-  5. Acrescenta as 3 ideias ao historico (o GitHub Actions comita de volta).
+  1. Busca os trends em alta no Brasil hoje (Google Trends).
+  2. Le o ranking oficial da PBR e a performance do Instagram (apoio).
+  3. Le o historico (historico.md) para NUNCA repetir ideia.
+  4. A IA cria 3 ideias DETALHADAS, cada uma partindo de um trend e adaptada
+     pra PBR usando um competidor de sucesso (sem o atleta precisar gravar).
+  5. Pra cada ideia, acha um reel REAL do Instagram (via Serper/Google) e manda
+     o link direto junto.
+  6. Envia no WhatsApp via CallMeBot (uma mensagem detalhada por ideia).
+  7. Acrescenta as 3 ideias ao historico (o GitHub Actions comita de volta).
 
 Variaveis de ambiente (Secrets no GitHub):
   ANTHROPIC_API_KEY     -> chave da API da Anthropic (obrigatoria)
   CALLMEBOT_APIKEY      -> API key do CallMeBot (obrigatoria)
   PHONE                 -> numero de destino, ex: +5512997416438 (obrigatoria)
+  SERPER_API_KEY        -> chave da API Serper.dev p/ achar reels (opcional)
   SUPERMETRICS_API_KEY  -> chave da API REST do Supermetrics (opcional)
   SUPERMETRICS_DS_USER  -> id do login do Supermetrics, se necessario (opcional)
-
-Se SUPERMETRICS_API_KEY nao estiver configurada (ou a chamada falhar), o agente
-continua funcionando so com trends/conhecimento de nicho e avisa na mensagem.
 """
 
 import html
@@ -37,7 +39,7 @@ from anthropic import Anthropic
 # ----------------------------------------------------------------------------
 # Configuracao
 # ----------------------------------------------------------------------------
-MODELO = "claude-sonnet-4-6"          # bom equilibrio qualidade/custo
+MODELO = "claude-sonnet-4-6"
 HISTORICO = "historico.md"
 FUSO_BRASILIA = timezone(timedelta(hours=-3))
 
@@ -50,15 +52,14 @@ SM_FIELDS = (
     "media_comments_count,media_reach,media_saved,media_shares"
 )
 
-# Ranking oficial da PBR Brazil (dados no HTML da pagina)
 RANKING_URL = "https://pbrbrazil.com/series/etapas/standings/"
-
-# Assuntos em alta no Brasil hoje (Google Trends - RSS publico)
 TRENDS_URL = "https://trends.google.com/trending/rss?geo=BR"
+SERPER_ENDPOINT = "https://google.serper.dev/search"
 
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 CALLMEBOT_APIKEY = os.environ.get("CALLMEBOT_APIKEY")
 PHONE = os.environ.get("PHONE")
+SERPER_API_KEY = os.environ.get("SERPER_API_KEY")
 SUPERMETRICS_API_KEY = os.environ.get("SUPERMETRICS_API_KEY")
 SUPERMETRICS_DS_USER = os.environ.get("SUPERMETRICS_DS_USER")
 
@@ -66,6 +67,9 @@ if not all([ANTHROPIC_API_KEY, CALLMEBOT_APIKEY, PHONE]):
     sys.exit("ERRO: faltam variaveis obrigatorias (ANTHROPIC_API_KEY, CALLMEBOT_APIKEY, PHONE).")
 
 
+# ----------------------------------------------------------------------------
+# Coleta de dados
+# ----------------------------------------------------------------------------
 def ler_historico():
     try:
         with open(HISTORICO, encoding="utf-8") as f:
@@ -74,19 +78,51 @@ def ler_historico():
         return ""
 
 
-def puxar_dados_pbr():
-    """Puxa a performance real dos posts da PBR via API REST do Supermetrics.
+def puxar_trends():
+    """Assuntos em alta no Brasil hoje (Google Trends, RSS publico)."""
+    try:
+        resp = requests.get(
+            TRENDS_URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=60
+        )
+        if resp.status_code != 200:
+            print("Aviso: Google Trends status %s" % resp.status_code)
+            return ""
+        titulos = re.findall(r"<title>(.*?)</title>", resp.text, re.S)
+        termos = [html.unescape(t).strip() for t in titulos[1:19] if t.strip()]
+        return ", ".join(termos)
+    except Exception as e:  # noqa: BLE001
+        print("Aviso: falha ao buscar trends: %s" % e)
+        return ""
 
-    Retorna um texto (JSON) com os dados, ou "" se indisponivel.
-    """
+
+def puxar_ranking_pbr():
+    """Ranking oficial da PBR Brazil (top atletas, do HTML do site)."""
+    try:
+        resp = requests.get(
+            RANKING_URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=60
+        )
+        if resp.status_code != 200:
+            print("Aviso: ranking PBR status %s" % resp.status_code)
+            return ""
+        m = re.search(r"<tbody>(.*?)</tbody>", resp.text, re.S | re.I)
+        bloco = m.group(1) if m else resp.text
+        texto = re.sub(r"<[^>]+>", " ", bloco)
+        texto = html.unescape(texto)
+        texto = re.sub(r"\s+", " ", texto).strip()
+        return texto[:2500] if texto else ""
+    except Exception as e:  # noqa: BLE001
+        print("Aviso: falha ao ler ranking PBR: %s" % e)
+        return ""
+
+
+def puxar_dados_pbr():
+    """Performance dos posts da PBR via API REST do Supermetrics (apoio)."""
     if not SUPERMETRICS_API_KEY:
         print("Aviso: SUPERMETRICS_API_KEY nao configurada - seguindo sem dados reais.")
         return ""
-
     hoje = datetime.now(FUSO_BRASILIA)
     inicio = (hoje - timedelta(days=30)).strftime("%Y-%m-%d")
     fim = hoje.strftime("%Y-%m-%d")
-
     consulta = {
         "api_key": SUPERMETRICS_API_KEY,
         "ds_id": SM_DS_ID,
@@ -99,7 +135,6 @@ def puxar_dados_pbr():
     }
     if SUPERMETRICS_DS_USER:
         consulta["ds_user"] = SUPERMETRICS_DS_USER
-
     try:
         resp = requests.get(
             SM_ENDPOINT, params={"json": json.dumps(consulta)}, timeout=180
@@ -107,200 +142,180 @@ def puxar_dados_pbr():
         if resp.status_code != 200:
             print("Aviso: Supermetrics status %s: %s" % (resp.status_code, resp.text[:300]))
             return ""
-        # Devolve o JSON cru (truncado); a IA interpreta os melhores posts.
         return resp.text[:8000]
     except Exception as e:  # noqa: BLE001
         print("Aviso: falha ao chamar o Supermetrics: %s" % e)
         return ""
 
 
-def puxar_ranking_pbr():
-    """Le o ranking oficial da PBR Brazil (atletas, pontos, stats) do site.
+def achar_reel_instagram(termo):
+    """Acha um reel REAL do Instagram sobre o trend (via Serper/Google).
 
-    Os dados vem no HTML da pagina (tabela). Retorna texto limpo do topo do
-    ranking, ou "" se indisponivel.
+    Retorna a URL direta do reel, ou um link de hashtag como fallback, ou "".
     """
-    try:
-        resp = requests.get(
-            RANKING_URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=60
-        )
-        if resp.status_code != 200:
-            print("Aviso: ranking PBR status %s" % resp.status_code)
-            return ""
-        m = re.search(r"<tbody>(.*?)</tbody>", resp.text, re.S | re.I)
-        bloco = m.group(1) if m else resp.text
-        texto = re.sub(r"<[^>]+>", " ", bloco)      # remove tags
-        texto = html.unescape(texto)                # decodifica entidades
-        texto = re.sub(r"\s+", " ", texto).strip()  # normaliza espacos
-        # Colunas: Classificacao, Competidor, Pais, Eventos, Montarias/Paradas,
-        # % Paradas, Dinheiro, Pontos, Diferenca do Lider.
-        return texto[:2500] if texto else ""
-    except Exception as e:  # noqa: BLE001
-        print("Aviso: falha ao ler ranking PBR: %s" % e)
+    if not termo:
         return ""
+    if SERPER_API_KEY:
+        for consulta in (termo + " site:instagram.com/reel", termo + " instagram reel"):
+            try:
+                resp = requests.post(
+                    SERPER_ENDPOINT,
+                    headers={"X-API-KEY": SERPER_API_KEY, "Content-Type": "application/json"},
+                    json={"q": consulta, "gl": "br", "hl": "pt-br", "num": 10},
+                    timeout=30,
+                )
+                if resp.status_code != 200:
+                    print("Aviso: Serper status %s" % resp.status_code)
+                    continue
+                for item in resp.json().get("organic", []):
+                    link = item.get("link", "")
+                    if "instagram.com/reel" in link or "instagram.com/p/" in link:
+                        return link.split("?")[0]
+            except Exception as e:  # noqa: BLE001
+                print("Aviso: falha ao buscar reel: %s" % e)
+    # fallback: link de hashtag (abre o Instagram no trend)
+    slug = re.sub(r"[^a-z0-9]", "", termo.lower())[:30]
+    return "https://www.instagram.com/explore/tags/%s/" % slug if slug else ""
 
 
-def puxar_trends():
-    """Busca os assuntos em alta no Brasil hoje (Google Trends, RSS publico)."""
-    try:
-        resp = requests.get(
-            TRENDS_URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=60
-        )
-        if resp.status_code != 200:
-            print("Aviso: Google Trends status %s" % resp.status_code)
-            return ""
-        titulos = re.findall(r"<title>(.*?)</title>", resp.text, re.S)
-        # o 1o titulo e o nome do feed; pega os proximos ~18 termos em alta
-        termos = [html.unescape(t).strip() for t in titulos[1:19] if t.strip()]
-        return ", ".join(termos)
-    except Exception as e:  # noqa: BLE001
-        print("Aviso: falha ao buscar trends: %s" % e)
-        return ""
-
-
+# ----------------------------------------------------------------------------
+# Geracao das ideias (IA)
+# ----------------------------------------------------------------------------
 def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
-    """Pede a IA 3 ideias novas. Retorna dict com 'whatsapp' e 'historico'."""
+    """Pede a IA 3 ideias DETALHADAS. Retorna dict com 'ideias' e 'historico'."""
     client = Anthropic(api_key=ANTHROPIC_API_KEY)
 
     sistema = (
-        "Voce e um especialista em TRENDS virais de redes sociais (Reels do "
-        "Instagram, TikTok) aplicados ao nicho de montaria em touros / PBR Brazil. "
-        "Sua especialidade: pegar um TREND viral do momento (um formato de video, "
-        "um audio/musica em alta, um meme, um desafio, ou um assunto que esta "
-        "bombando) e adaptar pro cenario da PBR Brazil, usando um competidor de "
-        "sucesso como personagem. "
-        "RESTRICAO IMPORTANTE: os atletas NAO estao disponiveis pra gravar nada "
-        "novo - entao NADA de dancinha, coreografia, ou o atleta participando do "
-        "trend ao vivo. A execucao tem que funcionar com material que a PBR ja "
-        "tem: imagens de arquivo, montarias antigas, cortes, audio em alta por "
-        "cima de clipes existentes, texto na tela, comparacoes e narracao. "
-        "Escreva sempre em portugues do Brasil com acentuacao correta e use "
-        "poucos emojis."
+        "Voce e um especialista em TRENDS virais de Instagram (Reels) aplicados ao "
+        "nicho de montaria em touros / PBR Brazil. Sua especialidade: pegar um TREND "
+        "viral do momento (um formato de reel em alta, um audio/musica, um meme, um "
+        "desafio, ou um assunto que esta bombando) e adaptar pro cenario da PBR "
+        "Brazil, usando um competidor de sucesso como personagem. "
+        "RESTRICAO: os atletas NAO estao disponiveis pra gravar nada novo - NADA de "
+        "dancinha, coreografia, ou o atleta participando do trend ao vivo. A execucao "
+        "usa material que a PBR ja tem: imagens de arquivo, montarias antigas, cortes, "
+        "audio em alta por cima de clipes, texto na tela, comparacoes e narracao. "
+        "Voce escreve BRIEFINGS DETALHADOS pra um videomaker executar sem duvidas. "
+        "Escreva em portugues do Brasil com acentuacao correta."
     )
 
-    # FONTE PRINCIPAL: trends.
-    if trends:
-        bloco_trends = (
-            "ASSUNTOS EM ALTA NO BRASIL HOJE (Google Trends):\n" + trends + "\n"
-        )
-    else:
-        bloco_trends = (
-            "OBS: nao consegui puxar os trends de hoje - use seu conhecimento dos "
-            "formatos de reel virais atuais.\n"
-        )
-
-    # FONTES DE APOIO (so pra escolher o competidor e o que ressoa):
-    if ranking:
-        bloco_ranking = (
-            "\nAPOIO - Ranking oficial atual da PBR Brazil (use SO pra escolher um "
-            "competidor de sucesso pra encaixar no trend; colunas: Classificacao, "
-            "Competidor, Pais, Eventos, Montarias/Paradas, % Paradas, Dinheiro, "
-            "Pontos, Diferenca do Lider):\n" + ranking + "\n"
-        )
-    else:
-        bloco_ranking = ""
-
-    if dados_pbr:
-        bloco_dados = (
-            "\nAPOIO - performance dos posts recentes da PBR no Instagram (JSON do "
-            "Supermetrics; use SO pra entender que tipo de conteudo ressoa):\n"
-            + dados_pbr + "\n"
-        )
-    else:
-        bloco_dados = ""
+    bloco_trends = (
+        ("ASSUNTOS EM ALTA NO BRASIL HOJE (Google Trends):\n" + trends + "\n")
+        if trends else
+        "OBS: nao consegui puxar os trends de hoje - use seu conhecimento dos "
+        "formatos de reel virais atuais.\n"
+    )
+    bloco_ranking = (
+        ("\nAPOIO - Ranking oficial da PBR (use SO pra escolher um competidor de "
+         "sucesso pra encaixar no trend):\n" + ranking + "\n") if ranking else ""
+    )
+    bloco_dados = (
+        ("\nAPOIO - performance dos posts da PBR no Instagram (use SO pra saber que "
+         "tipo de conteudo ressoa):\n" + dados_pbr + "\n") if dados_pbr else ""
+    )
 
     instrucao = (
-        "Gere EXATAMENTE 3 ideias NOVAS de video (reels) para hoje ("
-        + data_str + ").\n\n"
-        "O FOCO #1 SAO OS TRENDS. Cada uma das 3 ideias deve PARTIR de um trend "
-        "viral (um formato de reel em alta, um audio/musica do momento, um meme, "
-        "um desafio, OU um dos assuntos em alta abaixo) e ADAPTAR pro cenario da "
-        "PBR Brazil, usando um competidor de sucesso como personagem.\n\n"
-        + bloco_trends
-        + bloco_ranking
-        + bloco_dados
-        + "\nLEMBRETE CRITICO: os atletas NAO estao disponiveis pra gravar - NADA "
-        "de dancinha/coreografia/atleta participando do trend. Use so material de "
-        "arquivo (montarias, cortes), edicao, audio em alta por cima de clipes, "
-        "texto na tela, comparacoes e narracao.\n\n"
-        "REGRA: as ideias NAO podem repetir nem ser variacoes obvias de nenhuma "
-        "ideia ja enviada. Historico completo (nao repita nada parecido):\n"
+        "Gere EXATAMENTE 3 ideias NOVAS de reel para hoje (" + data_str + ").\n\n"
+        "O FOCO #1 SAO OS TRENDS. Cada ideia PARTE de um trend viral e ADAPTA pro "
+        "cenario da PBR Brazil, com um competidor de sucesso como personagem.\n\n"
+        + bloco_trends + bloco_ranking + bloco_dados
+        + "\nLEMBRETE: atletas NAO gravam nada - use so arquivo, edicao, audio sobre "
+        "clipes, texto na tela, comparacoes e narracao.\n\n"
+        "REGRA: nao repita nem faca variacao obvia de nada do historico:\n"
         "--- HISTORICO ---\n"
-        + (historico or "(vazio - nenhuma ideia enviada ainda)")
+        + (historico or "(vazio)")
         + "\n--- FIM DO HISTORICO ---\n\n"
-        "Cada ideia precisa deixar claro: QUAL e o trend, e COMO adaptar pra PBR "
-        "(formato, gancho dos primeiros 3s, e qual competidor/angulo usar).\n\n"
-        "Use a ferramenta 'enviar_ideias' para responder com a mensagem de WhatsApp "
-        "pronta e o resumo das 3 ideias."
+        "IMPORTANTISSIMO: cada ideia tem que vir MUITO DETALHADA, um briefing "
+        "completo pro videomaker executar sem duvidas. Nada de resumo curto. "
+        "Use a ferramenta 'enviar_ideias'."
     )
 
     ferramenta = {
         "name": "enviar_ideias",
-        "description": "Envia a mensagem de WhatsApp pronta e o resumo das 3 ideias.",
+        "description": "Envia as 3 ideias detalhadas de reel.",
         "input_schema": {
             "type": "object",
             "properties": {
-                "whatsapp": {
-                    "type": "string",
-                    "description": (
-                        "Mensagem pronta pra WhatsApp, em portugues com acentos e "
-                        "POUCOS emojis (so um touro no titulo). Comece com a linha de "
-                        "titulo: PBR Brazil - Trends de hoje (" + data_str + "). "
-                        "Liste as 3 ideias numeradas 1) 2) 3). Cada ideia deve mostrar "
-                        "em 2-3 linhas curtas: o TREND (qual e), como adaptar pra PBR "
-                        "(formato + gancho dos primeiros 3s) e qual competidor/angulo. "
-                        "Seja direta e pratica."
-                    ),
+                "ideias": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "titulo": {
+                                "type": "string",
+                                "description": "Titulo curto e chamativo do reel.",
+                            },
+                            "trend": {
+                                "type": "string",
+                                "description": (
+                                    "Qual e o trend viral de origem (formato/audio/"
+                                    "meme/assunto) e por que esta em alta."
+                                ),
+                            },
+                            "busca": {
+                                "type": "string",
+                                "description": (
+                                    "Termo curto (2-5 palavras, em portugues) pra "
+                                    "achar no Google/Instagram um reel REAL que seja "
+                                    "exemplo desse trend. Sem hashtag, sem aspas."
+                                ),
+                            },
+                            "brief": {
+                                "type": "string",
+                                "description": (
+                                    "Briefing DETALHADO pro videomaker, bem completo. "
+                                    "Inclua: o gancho dos primeiros 3s (texto na tela e "
+                                    "imagem), o roteiro CENA A CENA (passo a passo do "
+                                    "que aparece e quando), qual audio/musica usar, "
+                                    "quais imagens de arquivo/montarias/competidor usar "
+                                    "(cite o nome do competidor do ranking), a duracao "
+                                    "sugerida, e a legenda/CTA final. Varias frases, "
+                                    "sem economizar em explicacao."
+                                ),
+                            },
+                        },
+                        "required": ["titulo", "trend", "busca", "brief"],
+                    },
                 },
                 "historico": {
                     "type": "array",
                     "items": {"type": "string"},
                     "description": "As 3 ideias resumidas em 1 linha cada (Titulo - resumo).",
                 },
-                "buscas": {
-                    "type": "array",
-                    "items": {"type": "string"},
-                    "description": (
-                        "EXATAMENTE 3 termos de busca curtos (um por ideia, na mesma "
-                        "ordem 1,2,3) pra encontrar exemplos REAIS do trend no TikTok/"
-                        "Instagram. Ex: nome do audio/musica, nome do desafio, ou o "
-                        "formato + palavra 'trend'. Sem hashtag, sem aspas."
-                    ),
-                },
             },
-            "required": ["whatsapp", "historico", "buscas"],
+            "required": ["ideias", "historico"],
         },
     }
 
     resp = client.messages.create(
         model=MODELO,
-        max_tokens=1500,
+        max_tokens=3500,
         system=sistema,
         tools=[ferramenta],
         tool_choice={"type": "tool", "name": "enviar_ideias"},
         messages=[{"role": "user", "content": instrucao}],
     )
-
     for bloco in resp.content:
         if getattr(bloco, "type", None) == "tool_use":
             return bloco.input
     raise RuntimeError("A IA nao retornou as ideias no formato esperado.")
 
 
-def _dividir_mensagem(texto, limite=500):
-    """Quebra a mensagem em partes (o CallMeBot trunca mensagens longas).
-
-    Mantem blocos (ideias separadas por linha em branco) inteiros.
-    """
+# ----------------------------------------------------------------------------
+# Envio (WhatsApp via CallMeBot)
+# ----------------------------------------------------------------------------
+def _dividir_mensagem(texto, limite=550):
+    """Quebra a mensagem em partes (o CallMeBot trunca mensagens longas)."""
     if len(texto) <= limite:
         return [texto]
-    blocos = texto.split("\n\n")
     partes, atual = [], ""
-    for bloco in blocos:
-        candidato = (atual + "\n\n" + bloco) if atual else bloco
+    for linha in texto.split("\n"):
+        candidato = (atual + "\n" + linha) if atual else linha
         if len(candidato) > limite and atual:
             partes.append(atual)
-            atual = bloco
+            atual = linha
         else:
             atual = candidato
     if atual:
@@ -324,10 +339,21 @@ def enviar_whatsapp(mensagem):
     total = len(partes)
     for i, parte in enumerate(partes, 1):
         if total > 1:
-            parte = "(%d/%d)\n%s" % (i, total, parte)
+            parte = "(cont. %d/%d)\n%s" % (i, total, parte)
         _enviar_parte(parte)
-        if i < total:
-            time.sleep(8)  # respeita o limite de frequencia do CallMeBot
+        time.sleep(6)  # respeita o limite de frequencia do CallMeBot
+
+
+def montar_mensagem_ideia(indice, total, ideia, link):
+    linhas = [
+        "IDEIA %d/%d - %s" % (indice, total, ideia.get("titulo", "")),
+        "",
+        "Trend: " + ideia.get("trend", ""),
+    ]
+    if link:
+        linhas += ["", "Referencia (reel): " + link]
+    linhas += ["", "Como fazer:", ideia.get("brief", "")]
+    return "\n".join(linhas)
 
 
 def salvar_historico(linhas, data_str):
@@ -338,17 +364,7 @@ def salvar_historico(linhas, data_str):
         f.write(bloco)
 
 
-def adicionar_links(mensagem, buscas):
-    """Acrescenta um link de busca (TikTok) por ideia, pra ver o trend."""
-    if not buscas:
-        return mensagem
-    linhas = ["Veja os trends:"]
-    for i, busca in enumerate(buscas, 1):
-        url = "https://www.tiktok.com/search?q=" + urllib.parse.quote(str(busca))
-        linhas.append("%d) %s" % (i, url))
-    return mensagem + "\n\n" + "\n".join(linhas)
-
-
+# ----------------------------------------------------------------------------
 def main():
     hoje = datetime.now(FUSO_BRASILIA)
     data_iso = hoje.strftime("%Y-%m-%d")
@@ -360,10 +376,21 @@ def main():
     ranking = puxar_ranking_pbr()
     dados = gerar_ideias(historico, dados_pbr, ranking, trends, data_br)
 
-    mensagem = adicionar_links(dados["whatsapp"], dados.get("buscas"))
-    enviar_whatsapp(mensagem)
+    ideias = dados["ideias"]
+    total = len(ideias)
+
+    # 1) cabecalho
+    enviar_whatsapp(
+        "PBR Brazil - Trends de hoje (%s)\n"
+        "Seguem %d ideias detalhadas (uma por mensagem):" % (data_br, total)
+    )
+    # 2) uma mensagem detalhada por ideia, com o link do reel
+    for i, ideia in enumerate(ideias, 1):
+        link = achar_reel_instagram(ideia.get("busca", ""))
+        enviar_whatsapp(montar_mensagem_ideia(i, total, ideia, link))
+
     salvar_historico(dados["historico"], data_iso)
-    print("OK - ideias enviadas e historico atualizado.")
+    print("OK - %d ideias enviadas e historico atualizado." % total)
 
 
 if __name__ == "__main__":
