@@ -296,20 +296,32 @@ def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
         },
     }
 
-    resp = client.messages.create(
-        model=MODELO,
-        max_tokens=8000,
-        system=sistema,
-        tools=[ferramenta],
-        tool_choice={"type": "tool", "name": "enviar_ideias"},
-        messages=[{"role": "user", "content": instrucao}],
-    )
-    for bloco in resp.content:
-        if getattr(bloco, "type", None) == "tool_use":
-            dados = bloco.input
-            if "ideias" in dados and dados["ideias"]:
+    # Tenta ate 3x: as vezes a IA devolve 'ideias' como texto em vez de lista.
+    for _ in range(3):
+        resp = client.messages.create(
+            model=MODELO,
+            max_tokens=8000,
+            system=sistema,
+            tools=[ferramenta],
+            tool_choice={"type": "tool", "name": "enviar_ideias"},
+            messages=[{"role": "user", "content": instrucao}],
+        )
+        for bloco in resp.content:
+            if getattr(bloco, "type", None) != "tool_use":
+                continue
+            dados = dict(bloco.input)
+            ideias = dados.get("ideias")
+            if isinstance(ideias, str):
+                try:
+                    ideias = json.loads(ideias)
+                except Exception:  # noqa: BLE001
+                    ideias = None
+            if (isinstance(ideias, list) and ideias
+                    and all(isinstance(x, dict) for x in ideias)):
+                dados["ideias"] = ideias
                 return dados
-    raise RuntimeError("A IA nao retornou as ideias no formato esperado (stop=%s)." % resp.stop_reason)
+        print("Aviso: formato das ideias invalido, tentando de novo...")
+    raise RuntimeError("A IA nao retornou as ideias no formato esperado.")
 
 
 # ----------------------------------------------------------------------------
