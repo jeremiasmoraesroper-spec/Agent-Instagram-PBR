@@ -112,3 +112,8 @@
 1. Senegal x Bélgica: e se fosse no brete? — Copa 2026 trend adaptado com JPV como personagem, split-screen futebol x rodeio, dados do ranking animados na tela
 2. Lukaku marca, touro derruba — reflexo ou força? — comparação de atributos físicos Lukaku x touro bravo com Warley Oliveira, corte rápido e dados na tela
 3. Yasmin Brunet virou notícia. Peão virou número. — trend de contraste visibilidade celebridade x atleta invisível, Lucas Araújo com maior aproveitamento do ranking como protagonista
+
+## 2026-07-01
+1. LDU x PBR: quem aguenta mais pressão? — Split-screen Copa Sul-Americana x brete, João Paulo Velasco como personagem, pressão e dados do ranking animados na tela
+2. Nicolas Raskin chegou. Warley também. — Card de apresentação estilo reforço de futebol com atributos do ranking de Warley Oliveira, texto animado e câmera lenta
+3. Chuva forte. Touro também. — Alerta meteorológico falso estilo defesa civil adaptado para touro bravo, Gabriel Henrique da Silva como personagem, boletim de emergência animado
