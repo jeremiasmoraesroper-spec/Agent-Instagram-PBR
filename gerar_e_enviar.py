@@ -173,9 +173,10 @@ def achar_reel_instagram(termo):
                         return link.split("?")[0]
             except Exception as e:  # noqa: BLE001
                 print("Aviso: falha ao buscar reel: %s" % e)
-    # fallback: link de hashtag (abre o Instagram no trend)
-    slug = re.sub(r"[^a-z0-9]", "", termo.lower())[:30]
-    return "https://www.instagram.com/explore/tags/%s/" % slug if slug else ""
+    # fallback: hashtag da 1a palavra do termo (existe de verdade no IG)
+    palavras = re.sub(r"[^a-z0-9 ]", " ", termo.lower()).split()
+    tag = palavras[0] if palavras else "rodeio"
+    return "https://www.instagram.com/explore/tags/%s/" % tag
 
 
 # ----------------------------------------------------------------------------
@@ -257,9 +258,15 @@ def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
                             "busca": {
                                 "type": "string",
                                 "description": (
-                                    "Termo curto (2-5 palavras, em portugues) pra "
-                                    "achar no Google/Instagram um reel REAL que seja "
-                                    "exemplo desse trend. Sem hashtag, sem aspas."
+                                    "Termo de busca GENERICO e simples (2-4 palavras) "
+                                    "que REALMENTE tenha reels no Instagram pra servir "
+                                    "de referencia visual do FORMATO. Foque no nicho "
+                                    "(montaria, touro, rodeio, PBR, peao) + o formato do "
+                                    "trend. Ex: 'montaria touro comparacao', 'rodeio "
+                                    "forca bruta', 'touro 8 segundos', 'peao arena "
+                                    "bastidor'. NAO use nomes especificos de jogos, "
+                                    "times, eventos ou pessoas do dia - isso nao tem "
+                                    "reel. Sem hashtag, sem aspas."
                                 ),
                             },
                             "brief": {
