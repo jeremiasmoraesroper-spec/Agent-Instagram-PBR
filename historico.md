@@ -107,3 +107,8 @@
 1. Courtois vs Touros Bravos — reflexo de Courtois (Copa do Mundo trend) comparado ao de JPV, split-screen, câmera lenta, dados do ranking
 2. Jogos do PS Plus Julho 2026 — lista mensal de games parodiada como missões impossíveis de JPV e Warley no ranking PBR, cards estilo menu de videogame
 3. Henrique Fogaça Reprova ou Aprova? — meme do chef severo do MasterChef julgando montarias, Cleber Henrique Marques como o único aprovado após volta de cirurgia
+
+## 2026-07-01
+1. Senegal x Bélgica: e se fosse no brete? — Copa 2026 trend adaptado com JPV como personagem, split-screen futebol x rodeio, dados do ranking animados na tela
+2. Lukaku marca, touro derruba — reflexo ou força? — comparação de atributos físicos Lukaku x touro bravo com Warley Oliveira, corte rápido e dados na tela
+3. Yasmin Brunet virou notícia. Peão virou número. — trend de contraste visibilidade celebridade x atleta invisível, Lucas Araújo com maior aproveitamento do ranking como protagonista
