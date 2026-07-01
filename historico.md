@@ -97,3 +97,8 @@
 1. Fábrica / linha de produção viral - Reel estilo processo industrial com stats do JPV, texto animado, gancho 'como se fabrica um líder'
 2. Gasolina (Daddy Yankee trend) - Montarias de Warley Oliveira cortadas no beat, texto de combustível e aproveitamento de 64%
 3. 30 de junho / balanço de semestre - Storytelling de meio de ano com Cleber Henrique Marques, de lesão ao top 3, texto na tela
+
+## 2026-07-01
+1. Mega Sena 3025 / sorteio — bolinhas animadas revelam dados do ranking de JPV, gancho 'quanto vale cada segundo'
+2. Casemiro comemoração viral — áudio/clipe da celebração do Casemiro sobre paradas de Warley Oliveira, comparação de texto na tela
+3. Camila Farani / Shark Tank pitch — métricas de Alisson De Souza apresentadas como startup invicta, texto animado estilo investimento
