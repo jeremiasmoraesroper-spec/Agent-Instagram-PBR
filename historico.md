@@ -102,3 +102,8 @@
 1. Mega Sena 3025 / sorteio — bolinhas animadas revelam dados do ranking de JPV, gancho 'quanto vale cada segundo'
 2. Casemiro comemoração viral — áudio/clipe da celebração do Casemiro sobre paradas de Warley Oliveira, comparação de texto na tela
 3. Camila Farani / Shark Tank pitch — métricas de Alisson De Souza apresentadas como startup invicta, texto animado estilo investimento
+
+## 2026-07-01
+1. Courtois vs Touros Bravos — reflexo de Courtois (Copa do Mundo trend) comparado ao de JPV, split-screen, câmera lenta, dados do ranking
+2. Jogos do PS Plus Julho 2026 — lista mensal de games parodiada como missões impossíveis de JPV e Warley no ranking PBR, cards estilo menu de videogame
+3. Henrique Fogaça Reprova ou Aprova? — meme do chef severo do MasterChef julgando montarias, Cleber Henrique Marques como o único aprovado após volta de cirurgia
