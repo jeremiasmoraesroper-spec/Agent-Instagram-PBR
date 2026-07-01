@@ -265,14 +265,14 @@ def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
                             "brief": {
                                 "type": "string",
                                 "description": (
-                                    "Briefing DETALHADO pro videomaker, bem completo. "
-                                    "Inclua: o gancho dos primeiros 3s (texto na tela e "
-                                    "imagem), o roteiro CENA A CENA (passo a passo do "
-                                    "que aparece e quando), qual audio/musica usar, "
-                                    "quais imagens de arquivo/montarias/competidor usar "
-                                    "(cite o nome do competidor do ranking), a duracao "
-                                    "sugerida, e a legenda/CTA final. Varias frases, "
-                                    "sem economizar em explicacao."
+                                    "Briefing DETALHADO pro videomaker, em TOPICOS "
+                                    "curtos (nao paragrafo corrido), OBJETIVO e no "
+                                    "maximo ~1600 caracteres. Inclua: Gancho (3s) com o "
+                                    "texto na tela; Roteiro cena a cena (o que aparece e "
+                                    "quando); Audio/musica; Imagens de arquivo/montarias "
+                                    "e qual competidor usar (cite o nome do ranking); "
+                                    "Duracao; e Legenda/CTA. Detalhado mas direto - o "
+                                    "videomaker tem que entender tudo sem duvida."
                                 ),
                             },
                         },
@@ -308,7 +308,7 @@ def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
 # ----------------------------------------------------------------------------
 # Envio (WhatsApp via CallMeBot)
 # ----------------------------------------------------------------------------
-def _dividir_mensagem(texto, limite=550):
+def _dividir_mensagem(texto, limite=750):
     """Quebra a mensagem em partes (o CallMeBot trunca mensagens longas)."""
     if len(texto) <= limite:
         return [texto]
@@ -389,6 +389,7 @@ def main():
     # 2) uma mensagem detalhada por ideia, com o link do reel
     for i, ideia in enumerate(ideias, 1):
         link = achar_reel_instagram(ideia.get("busca", ""))
+        print("Ideia %d - busca '%s' -> reel: %s" % (i, ideia.get("busca", ""), link))
         enviar_whatsapp(montar_mensagem_ideia(i, total, ideia, link))
 
     salvar_historico(dados["historico"], data_iso)
