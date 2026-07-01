@@ -291,7 +291,7 @@ def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
 
     resp = client.messages.create(
         model=MODELO,
-        max_tokens=3500,
+        max_tokens=8000,
         system=sistema,
         tools=[ferramenta],
         tool_choice={"type": "tool", "name": "enviar_ideias"},
@@ -299,8 +299,10 @@ def gerar_ideias(historico, dados_pbr, ranking, trends, data_str):
     )
     for bloco in resp.content:
         if getattr(bloco, "type", None) == "tool_use":
-            return bloco.input
-    raise RuntimeError("A IA nao retornou as ideias no formato esperado.")
+            dados = bloco.input
+            if "ideias" in dados and dados["ideias"]:
+                return dados
+    raise RuntimeError("A IA nao retornou as ideias no formato esperado (stop=%s)." % resp.stop_reason)
 
 
 # ----------------------------------------------------------------------------
