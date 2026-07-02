@@ -117,3 +117,8 @@
 1. LDU x PBR: quem aguenta mais pressão? — Split-screen Copa Sul-Americana x brete, João Paulo Velasco como personagem, pressão e dados do ranking animados na tela
 2. Nicolas Raskin chegou. Warley também. — Card de apresentação estilo reforço de futebol com atributos do ranking de Warley Oliveira, texto animado e câmera lenta
 3. Chuva forte. Touro também. — Alerta meteorológico falso estilo defesa civil adaptado para touro bravo, Gabriel Henrique da Silva como personagem, boletim de emergência animado
+
+## 2026-07-02
+1. 2 de Julho é Feriado — Mas Aqui Ninguém Para - Trend do feriado baiano adaptado com JPV: texto 'enquanto o Brasil tira folga, o líder não para', clipes de arquivo e dados do ranking.
+2. Finanças em Dia — JPV x Warley: Qual o Melhor Investimento? - Trend de finanças pessoais adaptado com cards estilo app de banco comparando rendimento, aproveitamento e faturamento dos dois primeiros do ranking.
+3. Previsão do Tempo para o Brete: Tempestade Chegando - Trend de boletim meteorológico adaptado com Cleber Henrique Marques, alertas animados de touro bravo e dados da volta de cirurgia ao top 3.
