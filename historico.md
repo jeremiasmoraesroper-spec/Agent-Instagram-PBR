@@ -127,3 +127,8 @@
 1. Quinto Dia Útil do Brete — JPV Recebe na Hora Certa - Meme do quinto dia útil/pagamento adaptado com faturamento de R$285k do líder JPV, texto estilo extrato bancário animado
 2. Wimbledon Tem Precisão. A PBR Também. Só Que o Adversário Morde. - Split-screen tênis x montaria comparando reflexos, Warley Oliveira como protagonista com 64,15% de aproveitamento
 3. 3 de Julho: Enquanto o Brasil Comemora, Esses Caras Estão no Brete - Trend de contraste festa x trabalho com Jhon Carlos Moreira, 6º do ranking e 64,1% de aproveitamento
+
+## 2026-07-04
+1. Jogo de Ontem da Copa? Aqui o Jogo É Todo Dia — Trend Copa do Mundo hijackado com placar animado estilo Copa, personagem JPV, contraste futebol x rodeio
+2. Cruzeiro Não É Só Barco — É Também o Nome do Touro que Afundou Planos — Trend virada de contexto com nome 'Cruzeiro', reveal cômico/dramático, personagem Warley Oliveira
+3. Previsão do Tempo para Hoje: Cleber Chega com Tudo — Trend boletim meteorológico fake/paródia com alerta animado, personagem Cleber Henrique Marques voltando de cirurgia ao top 3
