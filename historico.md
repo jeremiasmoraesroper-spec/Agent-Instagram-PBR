@@ -132,3 +132,8 @@
 1. Jogo de Ontem da Copa? Aqui o Jogo É Todo Dia — Trend Copa do Mundo hijackado com placar animado estilo Copa, personagem JPV, contraste futebol x rodeio
 2. Cruzeiro Não É Só Barco — É Também o Nome do Touro que Afundou Planos — Trend virada de contexto com nome 'Cruzeiro', reveal cômico/dramático, personagem Warley Oliveira
 3. Previsão do Tempo para Hoje: Cleber Chega com Tudo — Trend boletim meteorológico fake/paródia com alerta animado, personagem Cleber Henrique Marques voltando de cirurgia ao top 3
+
+## 2026-07-05
+1. Quem Ama Cuida — Mas Quem Monta, Respeita - Trend 'Quem Ama Cuida' adaptado com JPV, texto emocional na tela + clipes de bastidor e respeito ao animal, desmistificando o esporte
+2. Corredor do Brete: 8 Segundos Pra Cruzar o Fim - Trend 'corredor' (caminho de risco) adaptado como metáfora do brete com Warley Oliveira, tensão dramática e dados do 2º do ranking
+3. Alexandre Pires Cantou. O Touro Não Ligou. - Trend Alexandre Pires (em alta hoje) como trilha irônica sobre clipes de touros derrubando peões, humor seco com Jhon Carlos Moreira como underdog do ranking
