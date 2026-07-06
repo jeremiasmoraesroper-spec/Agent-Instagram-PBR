@@ -137,3 +137,8 @@
 1. Quem Ama Cuida — Mas Quem Monta, Respeita - Trend 'Quem Ama Cuida' adaptado com JPV, texto emocional na tela + clipes de bastidor e respeito ao animal, desmistificando o esporte
 2. Corredor do Brete: 8 Segundos Pra Cruzar o Fim - Trend 'corredor' (caminho de risco) adaptado como metáfora do brete com Warley Oliveira, tensão dramática e dados do 2º do ranking
 3. Alexandre Pires Cantou. O Touro Não Ligou. - Trend Alexandre Pires (em alta hoje) como trilha irônica sobre clipes de touros derrubando peões, humor seco com Jhon Carlos Moreira como underdog do ranking
+
+## 2026-07-06
+1. ACORDAR ÀS 6H É DIFÍCIL. O PORTÃO ABRIR É MAIS. - Trend 'acordar' adaptado com JPV, comparação cômica/dramática entre acordar cedo e abrir o portão do brete, dados do ranking animados na tela
+2. 9 DE JULHO É FERIADO DE QUÊ? AQUI A RESPOSTA QUE NINGUÉM DEU - Trend de busca 'feriado 9 de julho' hijackado com Warley Oliveira, card educativo estilo Google reveal + chamada para o evento Rio Preto
+3. RADAR DETECTOU ALGO. NÃO É CHUVA. - Trend 'radar' meteorológico adaptado com Lucas Araújo, overlay de radar falso revelando o maior % de aproveitamento do ranking (70,97%)
