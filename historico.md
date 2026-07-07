@@ -142,3 +142,8 @@
 1. ACORDAR ÀS 6H É DIFÍCIL. O PORTÃO ABRIR É MAIS. - Trend 'acordar' adaptado com JPV, comparação cômica/dramática entre acordar cedo e abrir o portão do brete, dados do ranking animados na tela
 2. 9 DE JULHO É FERIADO DE QUÊ? AQUI A RESPOSTA QUE NINGUÉM DEU - Trend de busca 'feriado 9 de julho' hijackado com Warley Oliveira, card educativo estilo Google reveal + chamada para o evento Rio Preto
 3. RADAR DETECTOU ALGO. NÃO É CHUVA. - Trend 'radar' meteorológico adaptado com Lucas Araújo, overlay de radar falso revelando o maior % de aproveitamento do ranking (70,97%)
+
+## 2026-07-07
+1. BENEDITO RUY BARBOSA ESCREVERIA ESSA HISTÓRIA — Roteiro estilo novela com JPV como protagonista, Warley como antagonista e queda de Rei da Mata como virada dramática, chamada para Rio Preto.
+2. ARGENTINA PERDEU PRO EGITO. AQUI O TOURO NÃO PERDOA NEM O FAVORITO. — Trend Copa 2026 (zebra) hijackado com split-screen placar de futebol x placar PBR, quedas de favoritos e Warley como quem respeita o adversário.
+3. QUINTA-FEIRA É FERIADO DE QUÊ? DEPENDE DE ONDE VOCÊ TRABALHA. — Trend de busca 'feriado 9 de julho' adaptado com meme de comparação de profissões, Adenilson dos Santos como personagem e chamada para evento Rio Preto 9-12/07.
