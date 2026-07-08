@@ -147,3 +147,8 @@
 1. BENEDITO RUY BARBOSA ESCREVERIA ESSA HISTÓRIA — Roteiro estilo novela com JPV como protagonista, Warley como antagonista e queda de Rei da Mata como virada dramática, chamada para Rio Preto.
 2. ARGENTINA PERDEU PRO EGITO. AQUI O TOURO NÃO PERDOA NEM O FAVORITO. — Trend Copa 2026 (zebra) hijackado com split-screen placar de futebol x placar PBR, quedas de favoritos e Warley como quem respeita o adversário.
 3. QUINTA-FEIRA É FERIADO DE QUÊ? DEPENDE DE ONDE VOCÊ TRABALHA. — Trend de busca 'feriado 9 de julho' adaptado com meme de comparação de profissões, Adenilson dos Santos como personagem e chamada para evento Rio Preto 9-12/07.
+
+## 2026-07-08
+1. NBA TEM PLAYOFFS. A PBR TEM O PORTÃO. — Comparativo de stats estilo NBA entre JPV (860pts, líder) e Warley Oliveira (621pts, perseguidor), com scoreboard animado e chamada para Rio Preto.
+2. ANGÉLICA ENTREVISTARIA ESSE CARA — MAS ELE NÃO PARA QUIETO. — Trend Angélica adaptado com 'entrevista imaginária' de Alisson De Souza, ficha VIP com stats e história dos irmãos, texto na tela estilo programa de auditório.
+3. STOCK MARKET DO BRETE: VEJA QUEM SUBIU E QUEM DESPENCOU HOJE. — Ranking PBR como bolsa de valores com ticker animado, JPV como ação líder e Lucas Araújo como maior valorização (70,97% de aproveitamento).
