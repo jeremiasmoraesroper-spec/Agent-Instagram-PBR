@@ -152,3 +152,8 @@
 1. NBA TEM PLAYOFFS. A PBR TEM O PORTÃO. — Comparativo de stats estilo NBA entre JPV (860pts, líder) e Warley Oliveira (621pts, perseguidor), com scoreboard animado e chamada para Rio Preto.
 2. ANGÉLICA ENTREVISTARIA ESSE CARA — MAS ELE NÃO PARA QUIETO. — Trend Angélica adaptado com 'entrevista imaginária' de Alisson De Souza, ficha VIP com stats e história dos irmãos, texto na tela estilo programa de auditório.
 3. STOCK MARKET DO BRETE: VEJA QUEM SUBIU E QUEM DESPENCOU HOJE. — Ranking PBR como bolsa de valores com ticker animado, JPV como ação líder e Lucas Araújo como maior valorização (70,97% de aproveitamento).
+
+## 2026-07-09
+1. Total Eclipse of the Heart / JPV - Música viral embalando montarias do líder em câmera lenta com sincronização dramática no refrão e dados do ranking na tela
+2. Sr. Sinistro do Brete / Warley Oliveira - Meme 'Sr. Sinistro' adaptado com touro imponente como vilão e Warley como o único capaz de dominá-lo
+3. Resultado da Loteria / Alisson De Souza - Trend de sorteio federal adaptado com números reais do atleta revelados estilo cartela de loteria animada
