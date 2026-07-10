@@ -157,3 +157,8 @@
 1. Total Eclipse of the Heart / JPV - Música viral embalando montarias do líder em câmera lenta com sincronização dramática no refrão e dados do ranking na tela
 2. Sr. Sinistro do Brete / Warley Oliveira - Meme 'Sr. Sinistro' adaptado com touro imponente como vilão e Warley como o único capaz de dominá-lo
 3. Resultado da Loteria / Alisson De Souza - Trend de sorteio federal adaptado com números reais do atleta revelados estilo cartela de loteria animada
+
+## 2026-07-10
+1. GREVE DE GASOLINA? AQUI O COMBUSTÍVEL NÃO TEM PREÇO - Trend da greve da gasolina adaptado com ironia sobre o valor de 8 segundos de JPV e R$285k em prêmios, texto na tela e câmera lenta.
+2. VÔLEI TEM RALLY. AQUI O RALLY DURA 8 SEGUNDOS E O TOURO DECIDE - Trend VNL/vôlei feminino adaptado com split-screen comparando rally do vôlei x montaria, Warley Oliveira como personagem e 64,81% de aproveitamento.
+3. SIGNO DO PEÃO: TOURO. E NÃO É O DO ZODÍACO. - Trend zodíaco adaptado com cards cômicos de 'características do signo Touro' ilustradas por clipes de touros e Gabriel Henrique da Silva como protagonista.
