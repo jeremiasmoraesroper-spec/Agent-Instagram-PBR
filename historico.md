@@ -162,3 +162,8 @@
 1. GREVE DE GASOLINA? AQUI O COMBUSTÍVEL NÃO TEM PREÇO - Trend da greve da gasolina adaptado com ironia sobre o valor de 8 segundos de JPV e R$285k em prêmios, texto na tela e câmera lenta.
 2. VÔLEI TEM RALLY. AQUI O RALLY DURA 8 SEGUNDOS E O TOURO DECIDE - Trend VNL/vôlei feminino adaptado com split-screen comparando rally do vôlei x montaria, Warley Oliveira como personagem e 64,81% de aproveitamento.
 3. SIGNO DO PEÃO: TOURO. E NÃO É O DO ZODÍACO. - Trend zodíaco adaptado com cards cômicos de 'características do signo Touro' ilustradas por clipes de touros e Gabriel Henrique da Silva como protagonista.
+
+## 2026-07-11
+1. DELEGADO DO BRETE: QUEM AUTORIZOU ESSE TOURO A EXISTIR? - Trend 'Delegado de Polícia' adaptado com inquérito policial animado, JPV como o líder que fecha o caso e o touro como suspeito
+2. CORAÇÃO DE MÃE NÃO MENTE — MAS O TOURO TAMBÉM NÃO - Trend da novela 'Coração de Mãe' adaptado com emoção de bastidor e sacrifício, Warley Oliveira como protagonista e gancho emocional materno
+3. ALERTA AMARELO: TEMPESTADE DE PONTOS SE APROXIMA DO RANKING - Trend 'Alerta Amarelo: Tempestade' adaptado com radar fake e múltiplos perseguidores no ranking, Gabriel Henrique da Silva como frente instável se aproximando de JPV
