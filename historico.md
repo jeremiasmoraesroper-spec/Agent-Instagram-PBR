@@ -167,3 +167,8 @@
 1. DELEGADO DO BRETE: QUEM AUTORIZOU ESSE TOURO A EXISTIR? - Trend 'Delegado de Polícia' adaptado com inquérito policial animado, JPV como o líder que fecha o caso e o touro como suspeito
 2. CORAÇÃO DE MÃE NÃO MENTE — MAS O TOURO TAMBÉM NÃO - Trend da novela 'Coração de Mãe' adaptado com emoção de bastidor e sacrifício, Warley Oliveira como protagonista e gancho emocional materno
 3. ALERTA AMARELO: TEMPESTADE DE PONTOS SE APROXIMA DO RANKING - Trend 'Alerta Amarelo: Tempestade' adaptado com radar fake e múltiplos perseguidores no ranking, Gabriel Henrique da Silva como frente instável se aproximando de JPV
+
+## 2026-07-12
+1. ESTATÍSTICAS DE COPA? AQUI OS NÚMEROS QUE O FUTEBOL NÃO TEM CORAGEM DE MOSTRAR - Trend de stat card da Copa do Mundo hijackado com dados reais de JPV (líder, 916pts, R$285k), cards animados estilo ESPN revelando as estatísticas do ranking PBR.
+2. EVERTON CEBOLINHA FAZ DRIBLE. ESSE CARA FAZ 8 SEGUNDOS EM CIMA DE 800KG. - Trend Everton Cebolinha/Copa adaptado com split-screen futebol x rodeio, Warley Oliveira (64,29% aproveitamento) como protagonista da comparação de atletas.
+3. ROCKSTAR LANÇOU GTA 6. MAS O JOGO MAIS DIFÍCIL DO BRASIL JÁ EXISTE HÁ ANOS. - Trend Rockstar/GTA 6 adaptado com tela de loading fake, ficha de personagem e barra de vida sobre montarias de JPV, missão impossível estilo videogame.
