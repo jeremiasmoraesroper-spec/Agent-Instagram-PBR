@@ -172,3 +172,8 @@
 1. ESTATÍSTICAS DE COPA? AQUI OS NÚMEROS QUE O FUTEBOL NÃO TEM CORAGEM DE MOSTRAR - Trend de stat card da Copa do Mundo hijackado com dados reais de JPV (líder, 916pts, R$285k), cards animados estilo ESPN revelando as estatísticas do ranking PBR.
 2. EVERTON CEBOLINHA FAZ DRIBLE. ESSE CARA FAZ 8 SEGUNDOS EM CIMA DE 800KG. - Trend Everton Cebolinha/Copa adaptado com split-screen futebol x rodeio, Warley Oliveira (64,29% aproveitamento) como protagonista da comparação de atletas.
 3. ROCKSTAR LANÇOU GTA 6. MAS O JOGO MAIS DIFÍCIL DO BRASIL JÁ EXISTE HÁ ANOS. - Trend Rockstar/GTA 6 adaptado com tela de loading fake, ficha de personagem e barra de vida sobre montarias de JPV, missão impossível estilo videogame.
+
+## 2026-07-13
+1. DESTROÇOS DE NAUFRÁGIO — Trend de naufrágio histórico viralizado hoje adaptado com JPV como sobrevivente do brete, cards animados de 'achados' e câmera lenta épica
+2. FRANCE VS SPAIN / WARLEY OLIVEIRA — Hijack do jogo da Copa do Mundo com stat card animado estilo ESPN comparando Warley (65,52%, 2º ranking) x brete, split-screen futebol x rodeio
+3. FÉRIAS DE JULHO / ADENILSON DOS SANTOS — Trend de contraste 'todo mundo de férias x eu trabalhando' com Adenilson (3º, 66,67% aproveitamento) e montagem split de verão x arena
