@@ -177,3 +177,8 @@
 1. DESTROÇOS DE NAUFRÁGIO — Trend de naufrágio histórico viralizado hoje adaptado com JPV como sobrevivente do brete, cards animados de 'achados' e câmera lenta épica
 2. FRANCE VS SPAIN / WARLEY OLIVEIRA — Hijack do jogo da Copa do Mundo com stat card animado estilo ESPN comparando Warley (65,52%, 2º ranking) x brete, split-screen futebol x rodeio
 3. FÉRIAS DE JULHO / ADENILSON DOS SANTOS — Trend de contraste 'todo mundo de férias x eu trabalhando' com Adenilson (3º, 66,67% aproveitamento) e montagem split de verão x arena
+
+## 2026-07-14
+1. QUEDA DA BASTILHA? AQUI QUEM CAI É O TOURO — Trend 14 de julho hijackado com Cleber Henrique Marques, comparação histórica animada e texto dramático sobre 8 segundos sem feriado
+2. HAALAND GUAXINIM vs TOURO BRAVO — Meme viral Haaland/guaxinim adaptado com split-screen e ficha de atributos, JPV (1º ranking) como o único que para o 'bicho mais difícil'
+3. RENDA FIXA OU VARIÁVEL? O RANKING PBR NÃO TEM POUPANÇA — Trend de finanças/Selic adaptado com cards estilo app de banco, Warley Oliveira como 'renda fixa' e JPV como o maior rendimento do portfólio
