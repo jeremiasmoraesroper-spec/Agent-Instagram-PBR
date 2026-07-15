@@ -182,3 +182,8 @@
 1. QUEDA DA BASTILHA? AQUI QUEM CAI É O TOURO — Trend 14 de julho hijackado com Cleber Henrique Marques, comparação histórica animada e texto dramático sobre 8 segundos sem feriado
 2. HAALAND GUAXINIM vs TOURO BRAVO — Meme viral Haaland/guaxinim adaptado com split-screen e ficha de atributos, JPV (1º ranking) como o único que para o 'bicho mais difícil'
 3. RENDA FIXA OU VARIÁVEL? O RANKING PBR NÃO TEM POUPANÇA — Trend de finanças/Selic adaptado com cards estilo app de banco, Warley Oliveira como 'renda fixa' e JPV como o maior rendimento do portfólio
+
+## 2026-07-15
+1. QUEM AMA CUIDA — E QUEM MONTA, O TOURO DECIDE - Trend 'Quem Ama Cuida?/Murilo Hidalgo' adaptado com JPV, texto dramático na tela, música emocional e narrativa de entrega total pelo esporte
+2. FAMÍLIA REAL x FAMÍLIA DO BRETE — SÓ UM SANGUE AQUI É AZUL - Trend Família Real Espanhola adaptado com Warley Oliveira, split-screen irônico palácio x brete e texto 'sangue de peão'
+3. VNL MASCULINO? O BRASIL JÁ TEM UM RALLY IMPOSSÍVEL — E DURA 8 SEGUNDOS - Trend VNL Masculino 2026 adaptado com Adenilson dos Santos, split-screen vôlei x rodeio e dados comparativos animados
