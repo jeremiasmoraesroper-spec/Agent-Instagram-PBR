@@ -187,3 +187,8 @@
 1. QUEM AMA CUIDA — E QUEM MONTA, O TOURO DECIDE - Trend 'Quem Ama Cuida?/Murilo Hidalgo' adaptado com JPV, texto dramático na tela, música emocional e narrativa de entrega total pelo esporte
 2. FAMÍLIA REAL x FAMÍLIA DO BRETE — SÓ UM SANGUE AQUI É AZUL - Trend Família Real Espanhola adaptado com Warley Oliveira, split-screen irônico palácio x brete e texto 'sangue de peão'
 3. VNL MASCULINO? O BRASIL JÁ TEM UM RALLY IMPOSSÍVEL — E DURA 8 SEGUNDOS - Trend VNL Masculino 2026 adaptado com Adenilson dos Santos, split-screen vôlei x rodeio e dados comparativos animados
+
+## 2026-07-16
+1. SUSPEITO DE LIDERAR: O RANKING QUE A POLÍCIA NÃO CONSEGUE EXPLICAR — Ficha de suspeito animada estilo delegacia com JPV (1º, 999pts, R$297k) como foragido do brete
+2. PETROBRAS ABASTECE O BRASIL. ESSE CARA ABASTECE A ARENA. — Comparação irônica combustível x Warley Oliveira (2º, 65,52% aproveitamento) com overlay estilo bomba de gasolina
+3. CALENDÁRIO DO BRETE 2026: TODO MÊS TEM PAGAMENTO — SÓ QUE QUEM APROVA É O TOURO — Paródia do calendário do Bolsa Família com Adenilson dos Santos (3º, 66,67% aproveitamento) e carimbo de aprovação do brete
