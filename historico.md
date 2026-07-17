@@ -192,3 +192,8 @@
 1. SUSPEITO DE LIDERAR: O RANKING QUE A POLÍCIA NÃO CONSEGUE EXPLICAR — Ficha de suspeito animada estilo delegacia com JPV (1º, 999pts, R$297k) como foragido do brete
 2. PETROBRAS ABASTECE O BRASIL. ESSE CARA ABASTECE A ARENA. — Comparação irônica combustível x Warley Oliveira (2º, 65,52% aproveitamento) com overlay estilo bomba de gasolina
 3. CALENDÁRIO DO BRETE 2026: TODO MÊS TEM PAGAMENTO — SÓ QUE QUEM APROVA É O TOURO — Paródia do calendário do Bolsa Família com Adenilson dos Santos (3º, 66,67% aproveitamento) e carimbo de aprovação do brete
+
+## 2026-07-17
+1. EXCOMUNHÃO DO BRETE — Decreto dramático/solene irônico sobre touro 'banido' que JPV ignora para liderar o ranking
+2. GRAUS DE DIFICULDADE — Termômetro educativo visual explicando o que separa nota 80 de 90+, com Warley Oliveira como protagonista
+3. 17 DE JULHO É DIA DE QUÊ? — Trend de contraste de profissões/calendário hijackado com Cleber Henrique Marques e a vida sem feriado no brete
