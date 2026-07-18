@@ -197,3 +197,8 @@
 1. EXCOMUNHÃO DO BRETE — Decreto dramático/solene irônico sobre touro 'banido' que JPV ignora para liderar o ranking
 2. GRAUS DE DIFICULDADE — Termômetro educativo visual explicando o que separa nota 80 de 90+, com Warley Oliveira como protagonista
 3. 17 DE JULHO É DIA DE QUÊ? — Trend de contraste de profissões/calendário hijackado com Cleber Henrique Marques e a vida sem feriado no brete
+
+## 2026-07-18
+1. TENENTE DO BRETE — Trend 'Tenente' (Google Trends 18/07) adaptado com JPV como autoridade silenciosa do ranking, texto épico na tela e clipes de arquivo.
+2. CORAÇÃO ACELERADO — Trend homônimo em alta adaptado com Warley Oliveira e dados científicos sobre o corpo durante os 8 segundos, áudio viral + trilha épica.
+3. EMBRAER PROJETA AVIÕES, A PBR PROJETA CAMPEÕES — Trend Embraer (Google Trends 18/07) adaptado com Adenilson dos Santos, paralelo orgulho nacional + precisão técnica brasileira.
