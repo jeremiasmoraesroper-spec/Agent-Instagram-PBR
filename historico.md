@@ -202,3 +202,8 @@
 1. TENENTE DO BRETE — Trend 'Tenente' (Google Trends 18/07) adaptado com JPV como autoridade silenciosa do ranking, texto épico na tela e clipes de arquivo.
 2. CORAÇÃO ACELERADO — Trend homônimo em alta adaptado com Warley Oliveira e dados científicos sobre o corpo durante os 8 segundos, áudio viral + trilha épica.
 3. EMBRAER PROJETA AVIÕES, A PBR PROJETA CAMPEÕES — Trend Embraer (Google Trends 18/07) adaptado com Adenilson dos Santos, paralelo orgulho nacional + precisão técnica brasileira.
+
+## 2026-07-19
+1. GASOLINA SUBIU. O QUE O TOURO FAZ COM ISSO? NADA. ELE NÃO PARA. — Trend gasolina em alta hijackado com ironia de valor/preço, JPV como protagonista que 'não liga' para custos externos
+2. DOMINGO TEM SORTEIO. NA PBR O SORTEIO É O TOURO. — Trend domingo + loterias da Caixa adaptado com animação estilo telão de loteria revelando o touro sorteado, Warley Oliveira como personagem
+3. DEFESA CIVIL EMITIU ALERTA. MAS NÃO É PRA CHUVA. — Trend Defesa Civil do RS adaptado com notificação de alerta de celular fake para touro de alto risco, Adenilson dos Santos como o peão que ignora o aviso
