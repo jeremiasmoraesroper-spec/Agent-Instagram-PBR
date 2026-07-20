@@ -207,3 +207,8 @@
 1. GASOLINA SUBIU. O QUE O TOURO FAZ COM ISSO? NADA. ELE NÃO PARA. — Trend gasolina em alta hijackado com ironia de valor/preço, JPV como protagonista que 'não liga' para custos externos
 2. DOMINGO TEM SORTEIO. NA PBR O SORTEIO É O TOURO. — Trend domingo + loterias da Caixa adaptado com animação estilo telão de loteria revelando o touro sorteado, Warley Oliveira como personagem
 3. DEFESA CIVIL EMITIU ALERTA. MAS NÃO É PRA CHUVA. — Trend Defesa Civil do RS adaptado com notificação de alerta de celular fake para touro de alto risco, Adenilson dos Santos como o peão que ignora o aviso
+
+## 2026-07-20
+1. RÁDIO MIX TOCOU. O TOURO NÃO CONHECE ESSA MÚSICA. — Contraste cômico/dramático entre trilha de rádio pop e montaria explosiva de Cleber Henrique Marques (3º do ranking, volta de cirurgia), áudio estilo locução de rádio.
+2. SUL-AMERICANA TEM DECISÃO. NO BRETE A DECISÃO DURA 8 SEGUNDOS. — Split-screen futebol x rodeio com placar animado estilo decisão de Copa, João Paulo Velasco (1º, 1028pts) como protagonista.
+3. VEÍCULO ELÉTRICO CHEGOU. O TOURO AINDA FUNCIONA A COMBUSTÃO. — Meme de comparação tecnologia x força bruta com cards animados, Warley Oliveira (2º, 66,13%) como piloto da máquina analógica.
