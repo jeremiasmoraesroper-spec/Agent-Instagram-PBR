@@ -212,3 +212,8 @@
 1. RÁDIO MIX TOCOU. O TOURO NÃO CONHECE ESSA MÚSICA. — Contraste cômico/dramático entre trilha de rádio pop e montaria explosiva de Cleber Henrique Marques (3º do ranking, volta de cirurgia), áudio estilo locução de rádio.
 2. SUL-AMERICANA TEM DECISÃO. NO BRETE A DECISÃO DURA 8 SEGUNDOS. — Split-screen futebol x rodeio com placar animado estilo decisão de Copa, João Paulo Velasco (1º, 1028pts) como protagonista.
 3. VEÍCULO ELÉTRICO CHEGOU. O TOURO AINDA FUNCIONA A COMBUSTÃO. — Meme de comparação tecnologia x força bruta com cards animados, Warley Oliveira (2º, 66,13%) como piloto da máquina analógica.
+
+## 2026-07-21
+1. DIA DE SORTE? AQUI QUEM DECIDE É O TOURO, NÃO O DESTINO - Trend 'Dia de Sorte' (Band, Google Trends 21/07) hijackado com mecânica de suspense/sorteio de touro, JPV como protagonista e revelação dramática de stats do ranking.
+2. ATLETICO MG TEM GARRA. O TOURO TAMBÉM. SÓ QUE ELE NÃO PERDE. - Trend Atlético MG (Google Trends 21/07) hijackado com comparativo futebol x rodeio, Warley Oliveira (2º, 66,13%) como protagonista e split-screen de garra e levantada.
+3. 21 DE JULHO: ENQUANTO O BRASIL COMEMORA, ELE ESTÁ NO BRETE - Trend '21 de julho' (Google Trends) adaptado com contraste feriado x atleta que não para, Cleber Henrique Marques (3º, volta de cirurgia) como personagem e cards animados de stats.
