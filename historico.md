@@ -217,3 +217,8 @@
 1. DIA DE SORTE? AQUI QUEM DECIDE É O TOURO, NÃO O DESTINO - Trend 'Dia de Sorte' (Band, Google Trends 21/07) hijackado com mecânica de suspense/sorteio de touro, JPV como protagonista e revelação dramática de stats do ranking.
 2. ATLETICO MG TEM GARRA. O TOURO TAMBÉM. SÓ QUE ELE NÃO PERDE. - Trend Atlético MG (Google Trends 21/07) hijackado com comparativo futebol x rodeio, Warley Oliveira (2º, 66,13%) como protagonista e split-screen de garra e levantada.
 3. 21 DE JULHO: ENQUANTO O BRASIL COMEMORA, ELE ESTÁ NO BRETE - Trend '21 de julho' (Google Trends) adaptado com contraste feriado x atleta que não para, Cleber Henrique Marques (3º, volta de cirurgia) como personagem e cards animados de stats.
+
+## 2026-07-22
+1. RIFA DO BRETE: QUEM VAI SAIR COM O PRÊMIO? — Trend de rifa/sorteio adaptado com revelação dramática do touro sorteado para JPV (1º, 1028pts), formato bilhete animado e suspense de abertura de portão.
+2. TAXA SELIC DO BRETE: O RENDIMENTO QUE O BANCO NÃO OFERECE — Trend Taxa Selic adaptado com cards estilo fintech revelando os stats de Warley Oliveira (2º, 66,13%) como 'ativo com maior rendimento por segundo do Brasil'.
+3. THIAGO ALMADA FEZ A TRANSFER. ESSE CARA TAMBÉM FEZ A DELE — SÓ QUE PRO TOPO DO RANKING — Trend Thiago Almada no Flamengo adaptado com card de apresentação de reforço estilo futebol para Cleber Henrique Marques (3º, volta de cirurgia, R$211k).
