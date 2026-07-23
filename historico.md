@@ -222,3 +222,8 @@
 1. RIFA DO BRETE: QUEM VAI SAIR COM O PRÊMIO? — Trend de rifa/sorteio adaptado com revelação dramática do touro sorteado para JPV (1º, 1028pts), formato bilhete animado e suspense de abertura de portão.
 2. TAXA SELIC DO BRETE: O RENDIMENTO QUE O BANCO NÃO OFERECE — Trend Taxa Selic adaptado com cards estilo fintech revelando os stats de Warley Oliveira (2º, 66,13%) como 'ativo com maior rendimento por segundo do Brasil'.
 3. THIAGO ALMADA FEZ A TRANSFER. ESSE CARA TAMBÉM FEZ A DELE — SÓ QUE PRO TOPO DO RANKING — Trend Thiago Almada no Flamengo adaptado com card de apresentação de reforço estilo futebol para Cleber Henrique Marques (3º, volta de cirurgia, R$211k).
+
+## 2026-07-23
+1. JUIZ DE FORA CONHECE SOFRIMENTO. O BRETE TAMBÉM. — Trend Juiz de Fora (Google Trends 23/07) hijackado com texto de resistência/identidade regional, JPV (1º, 1028pts, R$300k) como protagonista e cards animados de stats do ranking.
+2. TRIVIA DO BRETE: 3 PERGUNTAS QUE NINGUÉM SABE RESPONDER — Trend Trivia (Google Trends 23/07) adaptado com formato quiz de 3 perguntas sobre PBR, Warley Oliveira (2º, 66,13%, 744,5pts) como personagem revelado na resposta final.
+3. EX DE PEÃO NÃO EXISTE. TOURO QUE JÁ DERRUBOU, SIM. — Trend 'ex de Preta Gil' (Google Trends 23/07) adaptado com humor irônico 'ex que volta', Cleber Henrique Marques (3º, volta de cirurgia, R$211k) como protagonista da virada dramática.
