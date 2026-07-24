@@ -227,3 +227,8 @@
 1. JUIZ DE FORA CONHECE SOFRIMENTO. O BRETE TAMBÉM. — Trend Juiz de Fora (Google Trends 23/07) hijackado com texto de resistência/identidade regional, JPV (1º, 1028pts, R$300k) como protagonista e cards animados de stats do ranking.
 2. TRIVIA DO BRETE: 3 PERGUNTAS QUE NINGUÉM SABE RESPONDER — Trend Trivia (Google Trends 23/07) adaptado com formato quiz de 3 perguntas sobre PBR, Warley Oliveira (2º, 66,13%, 744,5pts) como personagem revelado na resposta final.
 3. EX DE PEÃO NÃO EXISTE. TOURO QUE JÁ DERRUBOU, SIM. — Trend 'ex de Preta Gil' (Google Trends 23/07) adaptado com humor irônico 'ex que volta', Cleber Henrique Marques (3º, volta de cirurgia, R$211k) como protagonista da virada dramática.
+
+## 2026-07-24
+1. GIL DO VIGOR / ADENILSON DOS SANTOS — Explicação animada estilo meme do economista sobre os números impossíveis do 4º do ranking (63,64% de aproveitamento)
+2. TESOURO DIRETO / WARLEY OLIVEIRA — Card estilo app de fintech comparando rendimento do Tesouro Direto x retorno de Warley por 8 segundos (2º, 66,67%)
+3. PREVISÃO DO TEMPO / JPV — Boletim meteorológico fake estilo TV com mapa do Brasil, JPV como sistema de alta pressão (1º, 1056pts) e Warley como frente fria avançando
