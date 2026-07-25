@@ -232,3 +232,8 @@
 1. GIL DO VIGOR / ADENILSON DOS SANTOS — Explicação animada estilo meme do economista sobre os números impossíveis do 4º do ranking (63,64% de aproveitamento)
 2. TESOURO DIRETO / WARLEY OLIVEIRA — Card estilo app de fintech comparando rendimento do Tesouro Direto x retorno de Warley por 8 segundos (2º, 66,67%)
 3. PREVISÃO DO TEMPO / JPV — Boletim meteorológico fake estilo TV com mapa do Brasil, JPV como sistema de alta pressão (1º, 1056pts) e Warley como frente fria avançando
+
+## 2026-07-25
+1. GUERRA COMERCIAL? O TOURO NÃO NEGOCIA TRÉGUA — Hijack do trend guerra comercial com split-screen manchete x brete, JPV (1º, 1056pts) como protagonista e texto 'aqui não tem negociação'
+2. GEMINI AI TENTOU PREVER ESSA MONTARIA — E ERROU — Meme 'IA previu x realidade' com interface fake de chat, Warley Oliveira (2º, 67,19%) como dado que a IA não consegue calcular
+3. PREVISÃO DO TEMPO PARA SÃO CRISTÓVÃO: TEMPESTADE DE PONTOS — Boletim meteorológico fake com Cleber Henrique Marques (3º, volta de cirurgia, R$211k) como sistema de alta pressão avançando no ranking
