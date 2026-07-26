@@ -237,3 +237,8 @@
 1. GUERRA COMERCIAL? O TOURO NÃO NEGOCIA TRÉGUA — Hijack do trend guerra comercial com split-screen manchete x brete, JPV (1º, 1056pts) como protagonista e texto 'aqui não tem negociação'
 2. GEMINI AI TENTOU PREVER ESSA MONTARIA — E ERROU — Meme 'IA previu x realidade' com interface fake de chat, Warley Oliveira (2º, 67,19%) como dado que a IA não consegue calcular
 3. PREVISÃO DO TEMPO PARA SÃO CRISTÓVÃO: TEMPESTADE DE PONTOS — Boletim meteorológico fake com Cleber Henrique Marques (3º, volta de cirurgia, R$211k) como sistema de alta pressão avançando no ranking
+
+## 2026-07-26
+1. ZODÍACO DO BRETE: SEU SIGNO DETERMINA QUAL TOURO VOCÊ MONTARIA — Cards por signo com revelação dramática, JPV como personagem, áudio de mistério em alta.
+2. PAQUITAS DO BRETE: QUEM SÃO AS ESTRELAS QUE A TV NÃO MOSTROU? — Revelação de 'grupo desconhecido' com Warley Oliveira, Cleber e JPV como protagonistas, formato nostalgia/bastidor.
+3. RESULTADO DO CONCURSO DO BRETE: OS NÚMEROS QUE A MEGA-SENA NÃO TEM CORAGEM DE SORTEAR — Telão animado de loteria revelando os dados impossíveis de Lucas Araújo (68,29% de aproveitamento, maior % do ranking).
