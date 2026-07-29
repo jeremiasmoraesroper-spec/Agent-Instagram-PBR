@@ -247,3 +247,8 @@
 1. LUIZ HENRIQUE É CRAQUE. ESSE CARA FAZ O MESMO COM 800KG NA FRENTE. — Comparativo de craque do futebol x JPV (1º do ranking), split-screen e stats animados, trend Luiz Henrique Google Trends 27/07.
 2. MISS UNIVERSO TEM CANDIDATAS. O BRETE TEM CANDIDATOS — E O TOURO ESCOLHE QUEM PASSA. — Paródia de concurso de beleza com Warley Oliveira (2º do ranking), estética de Miss Universe com 'notas do júri' animadas e queda dos eliminados.
 3. RESULTADO ANUNCIADO: MEGA-SENA 3036 NÃO PAGOU. O BRETE PAGOU R$335 MIL. — Telão de loteria fake revelando o prêmio de JPV (1º do ranking) como resultado do sorteio, contador de prêmio animado, trend Mega Sena 3036 27/07.
+
+## 2026-07-29
+1. KAVINSKY VOLTOU. O TOURO NÃO FOI EMBORA. — Estética cinemática neon/synthwave com áudio Kavinsky Nightcall, JPV (1º do ranking) em montaria câmera lenta, cortes no beat e stats animados na tela.
+2. LEGENDÁRIOS DO BRETE: O TIME QUE NINGUÉM ESCALA — Cards estilo FIFA Ultimate Team revelando top 5 do ranking PBR um a um, com clipes de arquivo de cada atleta e JPV como carta lenda.
+3. US OPEN DE BRETE: QUEM TEM O MELHOR SAQUE AQUI? — Split-screen tênis x rodeio comparando precisão, Lucas Araújo (67,44%, maior % do top 10) como protagonista e stats animados na tela.
