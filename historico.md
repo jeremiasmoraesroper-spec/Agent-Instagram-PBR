@@ -252,3 +252,8 @@
 1. KAVINSKY VOLTOU. O TOURO NÃO FOI EMBORA. — Estética cinemática neon/synthwave com áudio Kavinsky Nightcall, JPV (1º do ranking) em montaria câmera lenta, cortes no beat e stats animados na tela.
 2. LEGENDÁRIOS DO BRETE: O TIME QUE NINGUÉM ESCALA — Cards estilo FIFA Ultimate Team revelando top 5 do ranking PBR um a um, com clipes de arquivo de cada atleta e JPV como carta lenda.
 3. US OPEN DE BRETE: QUEM TEM O MELHOR SAQUE AQUI? — Split-screen tênis x rodeio comparando precisão, Lucas Araújo (67,44%, maior % do top 10) como protagonista e stats animados na tela.
+
+## 2026-07-30
+1. DANA WHITE ANUNCIARIA ESSE CARA — Apresentação estilo card de lutador UFC com João Paulo Velasco (1º do ranking), comparativo UFC x PBR com stats animados e montaria câmera lenta.
+2. 30 DE JULHO: ENQUANTO O BRASIL COMEMORA, ELE JÁ ESTÁ A 65% DO RANKING — Contraste feriado/datas comemorativas x Warley Oliveira (2º) trabalhando no brete, stats na tela e humor seco.
+3. MANSÃO DO BRETE: O QUE R$335 MIL CONSTROEM EM 8 SEGUNDOS — Trend 'mansão' hijackado com comparação de valores imobiliários x prêmios de JPV (1º, R$335k), split-screen e revelação dramática de stats.
