@@ -257,3 +257,8 @@
 1. DANA WHITE ANUNCIARIA ESSE CARA — Apresentação estilo card de lutador UFC com João Paulo Velasco (1º do ranking), comparativo UFC x PBR com stats animados e montaria câmera lenta.
 2. 30 DE JULHO: ENQUANTO O BRASIL COMEMORA, ELE JÁ ESTÁ A 65% DO RANKING — Contraste feriado/datas comemorativas x Warley Oliveira (2º) trabalhando no brete, stats na tela e humor seco.
 3. MANSÃO DO BRETE: O QUE R$335 MIL CONSTROEM EM 8 SEGUNDOS — Trend 'mansão' hijackado com comparação de valores imobiliários x prêmios de JPV (1º, R$335k), split-screen e revelação dramática de stats.
+
+## 2026-07-31
+1. AVALANCHE NO RANKING — E ELE ESTÁ NA FRENTE DA NEVE - Trend 'avalanche' (Google Trends 31/07) adaptado com JPV (1º, 1.130pts) como líder que não foge da neve dos perseguidores, split-screen avalanche x montaria e contador de pontos animado.
+2. NEGÓCIOS DA ARENA: QUANTO VALE 1 SEGUNDO DO MELHOR APROVEITAMENTO DO BRASIL? - Trend 'negócios' (Google Trends 31/07) adaptado com calculadora animada revelando o valor por segundo de Warley Oliveira (2º, R$155,30/s, 66,18% aproveitamento), cards estilo fintech.
+3. INDENIZAÇÃO DO BRETE: O QUE O TOURO TE DEVE DEPOIS DISSO? - Trend 'indenização' (Google Trends 31/07) adaptado com documento jurídico animado e humor seco, Jhon Carlos Moreira (6º, 66,04% aproveitamento) como o peão que nega o pedido do touro ao completar 8 segundos.
