@@ -262,3 +262,8 @@
 1. AVALANCHE NO RANKING — E ELE ESTÁ NA FRENTE DA NEVE - Trend 'avalanche' (Google Trends 31/07) adaptado com JPV (1º, 1.130pts) como líder que não foge da neve dos perseguidores, split-screen avalanche x montaria e contador de pontos animado.
 2. NEGÓCIOS DA ARENA: QUANTO VALE 1 SEGUNDO DO MELHOR APROVEITAMENTO DO BRASIL? - Trend 'negócios' (Google Trends 31/07) adaptado com calculadora animada revelando o valor por segundo de Warley Oliveira (2º, R$155,30/s, 66,18% aproveitamento), cards estilo fintech.
 3. INDENIZAÇÃO DO BRETE: O QUE O TOURO TE DEVE DEPOIS DISSO? - Trend 'indenização' (Google Trends 31/07) adaptado com documento jurídico animado e humor seco, Jhon Carlos Moreira (6º, 66,04% aproveitamento) como o peão que nega o pedido do touro ao completar 8 segundos.
+
+## 2026-08-01
+1. DIVIDENDO DO BRETE: JPV PAGOU R$335 MIL — O BANCO NÃO FAZ ISSO - Trend 'dividendo' hijackado com cards estilo extrato bancário revelando os stats de JPV (1º, R$335k, 1.130pts), comparativo irônico Tesouro Selic x rendimento do brete
+2. FERNANDA TORRES GANHOU O OSCAR. ELE GANHA 8 SEGUNDOS DE CADA VEZ. - Trend Fernanda Torres adaptado com comparativo orgulho nacional, Warley Oliveira (2º, 66,67%, R$155k) como herói invisível do Brasil, texto épico na tela
+3. VNL MASCULINO TEM RALLY. O RALLY DO BRETE É UM CRIME. - Trend VNL masculino hijackado com split-screen vôlei x rodeio, Alex Oliveira (4º, R$304k, 58,18%) como protagonista do rally mais difícil do Brasil
