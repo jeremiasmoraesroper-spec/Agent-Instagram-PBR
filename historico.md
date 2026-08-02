@@ -267,3 +267,8 @@
 1. DIVIDENDO DO BRETE: JPV PAGOU R$335 MIL — O BANCO NÃO FAZ ISSO - Trend 'dividendo' hijackado com cards estilo extrato bancário revelando os stats de JPV (1º, R$335k, 1.130pts), comparativo irônico Tesouro Selic x rendimento do brete
 2. FERNANDA TORRES GANHOU O OSCAR. ELE GANHA 8 SEGUNDOS DE CADA VEZ. - Trend Fernanda Torres adaptado com comparativo orgulho nacional, Warley Oliveira (2º, 66,67%, R$155k) como herói invisível do Brasil, texto épico na tela
 3. VNL MASCULINO TEM RALLY. O RALLY DO BRETE É UM CRIME. - Trend VNL masculino hijackado com split-screen vôlei x rodeio, Alex Oliveira (4º, R$304k, 58,18%) como protagonista do rally mais difícil do Brasil
+
+## 2026-08-02
+1. RESULTADO DO JOGO DO SANTOS? AQUI O PLACAR DURA 8 SEGUNDOS E NÃO TEM EMPATE — Hijack do trend Santos FC com placar animado estilo transmissão ao vivo, João Paulo Velasco (1º, 1.130pts) como protagonista e reveal dramático de stats do ranking
+2. RONALDINHO GAÚCHO DRIBLOU TODOS. ESSE CARA FAZ O MESMO — SÓ QUE O ADVERSÁRIO TEM 800KG — Split-screen habilidade futebol x rodeio com Warley Oliveira (2º, 66,20%), texto emocional 'herói invisível' e dados do ranking animados na tela
+3. STJ DESPORTIVO JULGOU. O TOURO RECORREU. E GANHOU. — Meme STJD adaptado com documento jurídico animado, Alex Oliveira (4º, R$309k) como réu e carimbo de decisão fake revelando o veredito do brete
